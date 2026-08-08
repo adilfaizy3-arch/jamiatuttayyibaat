@@ -128,7 +128,7 @@ async function saveProfile(){const name=$('profileName').value.trim();if(!name)r
 
 sb.auth.onAuthStateChange(async(_event,session)=>{state.user=session?.user||null;if(state.user){try{await loadProfile();await loadBase();await loadAcademic();$('guestActions').classList.add('hidden');$('userActions').classList.remove('hidden');$('view-landing').classList.add('hidden');navigate('dashboard')}catch(e){toast(e.message,'error')}}else{$('guestActions').classList.remove('hidden');$('userActions').classList.add('hidden');state.profile=null;state.user=null;applyVisibility();$('view-landing').classList.remove('hidden');renderLanding()}});
 
-(async function init(){try{applyLang(localStorage.getItem('jamiat_lang')||'en')}catch(e){}$('langSelect').value=state.lang;const {data:{session}}=await sb.auth.getSession();if(session){state.user=session.user;await loadProfile();await loadBase();await loadAcademic();$('guestActions').classList.add('hidden');$('userActions').classList.remove('hidden');$('view-landing').classList.add('hidden');navigate('dashboard')}else{await loadBase()}window.addEventListener('resize',()=>{$('sidebarToggle').classList.toggle('hidden',innerWidth>820)})})();
+(async function init(){try{applyLang(localStorage.getItem('jamiat_lang')||'en')}catch(e){}$('langSelect').value=state.lang;const {data:{session}}=await sb.auth.getSession();if(session){state.user=session.user;await loadProfile();await loadBase();await loadAcademic();$('guestActions').classList.add('hidden');$('userActions').classList.remove('hidden');$('view-landing').classList.add('hidden');navigate('dashboard')}else{await loadBase()}window.addEventListener('resize',()=>{$('sidebarToggle').classList.toggle('hidden',innerWidth>820)})})(); 
 </script>
 </body>
 </html>
