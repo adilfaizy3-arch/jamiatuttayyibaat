@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jamiatuttayyibaat — Premium Islamic Education</title>
-    <link rel="manifest" href="manifest.json">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
@@ -39,12 +38,6 @@
         ::-webkit-scrollbar-track { background: var(--cream); }
         ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: var(--maroon); }
-        .glass {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
         .app {
             max-width: 1280px;
             margin: 0 auto;
@@ -270,15 +263,6 @@
         .btn-gold:hover {
             transform: translateY(-2px);
             box-shadow: var(--shadow-gold);
-        }
-        .btn-outline {
-            background: transparent;
-            color: var(--maroon);
-            border: 2px solid var(--maroon);
-        }
-        .btn-outline:hover {
-            background: var(--maroon);
-            color: var(--cream);
         }
         .btn-sm { padding: 6px 16px; font-size: 0.75rem; }
         .course-card.hifz-card {
@@ -509,7 +493,6 @@
             font-size: 1rem;
             padding: 14px 40px;
         }
-        /* Admission Form Styles */
         .admission-form {
             display: grid;
             gap: 16px;
@@ -733,8 +716,10 @@
 <script>
 // ================================================================
 // COMPLETE PREMIUM IMPLEMENTATION WITH WHATSAPP ADMISSION
+// FIXED: Removed manifest.json, added DOMContentLoaded
 // ================================================================
 
+// ---- COURSE DATA ----
 const COURSES = [
     {
         id: 'alima',
@@ -804,6 +789,7 @@ const COURSES = [
     }
 ];
 
+// ---- I18N ----
 const LANG = {
     en: {
         home: 'Home', courses: 'Courses', dashboard: 'Dashboard', teachers: 'Teachers', rules: 'Rules',
@@ -855,10 +841,12 @@ const LANG = {
     }
 };
 
+// ---- STATE ----
 let currentLang = 'en';
 let currentView = 'home';
 let selectedCourseId = null;
 
+// ---- DOM REFS ----
 const langSwitch = document.getElementById('langSwitch');
 const mainNav = document.getElementById('mainNav');
 const homeCourses = document.getElementById('homeCourses');
@@ -866,6 +854,7 @@ const coursesGrid = document.getElementById('coursesGrid');
 const detailOverlay = document.getElementById('courseDetailOverlay');
 const detailContent = document.getElementById('courseDetailContent');
 
+// ---- FUNCTIONS ----
 function t(key) { return LANG[currentLang]?.[key] || key; }
 
 function setLanguage(lang) {
@@ -875,6 +864,7 @@ function setLanguage(lang) {
     updateNavLabels();
     renderCourses();
     renderHomeCourses();
+    console.log('🌐 Language changed to:', lang);
 }
 
 function updateNavLabels() {
@@ -901,6 +891,7 @@ function navigateTo(view) {
     if (view === 'dashboard') renderDashboard();
     if (view === 'teachers') renderTeachers();
     if (view === 'rules') renderRules();
+    console.log('📱 Navigated to:', view);
 }
 
 function renderCourseCards(container, maxItems) {
@@ -1017,6 +1008,7 @@ function openCourseDetail(courseId) {
     `;
     detailOverlay.classList.add('active');
     document.body.style.overflow = 'hidden';
+    console.log('📖 Course detail opened:', courseId);
 }
 
 function closeCourseDetail() {
@@ -1105,6 +1097,7 @@ function openAdmissionForm(courseId) {
     `;
     detailOverlay.classList.add('active');
     document.body.style.overflow = 'hidden';
+    console.log('📝 Admission form opened for:', courseId);
 }
 
 function sendWhatsApp(event, courseId) {
@@ -1142,6 +1135,7 @@ _This application was submitted via Jamiatuttayyibaat website._`;
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     
     window.open(whatsappUrl, '_blank');
+    console.log('📱 WhatsApp message sent for:', courseId);
 }
 
 function renderDashboard() {
@@ -1192,33 +1186,50 @@ function renderRules() {
     `;
 }
 
-langSwitch.addEventListener('click', (e) => {
-    const btn = e.target.closest('button');
-    if (!btn || !btn.dataset.lang) return;
-    setLanguage(btn.dataset.lang);
-});
+// ---- EVENT LISTENERS ----
+function initApp() {
+    console.log('🚀 Initializing Jamiatuttayyibaat...');
+    
+    // Language switch
+    langSwitch.addEventListener('click', (e) => {
+        const btn = e.target.closest('button');
+        if (!btn || !btn.dataset.lang) return;
+        setLanguage(btn.dataset.lang);
+    });
 
-mainNav.addEventListener('click', (e) => {
-    const btn = e.target.closest('button');
-    if (!btn || !btn.dataset.view) return;
-    navigateTo(btn.dataset.view);
-});
+    // Navigation
+    mainNav.addEventListener('click', (e) => {
+        const btn = e.target.closest('button');
+        if (!btn || !btn.dataset.view) return;
+        navigateTo(btn.dataset.view);
+    });
 
-detailOverlay.addEventListener('click', (e) => {
-    if (e.target === detailOverlay) closeCourseDetail();
-});
+    // Close modal on backdrop click
+    detailOverlay.addEventListener('click', (e) => {
+        if (e.target === detailOverlay) closeCourseDetail();
+    });
 
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeCourseDetail();
-});
+    // Keyboard: Escape to close modal
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeCourseDetail();
+    });
 
-setLanguage('en');
-navigateTo('home');
+    // Set initial state
+    setLanguage('en');
+    navigateTo('home');
 
-console.log('✅ Jamiatuttayyibaat Premium UI with WhatsApp Admission loaded');
-console.log('📚 Courses:', COURSES.length);
-console.log('🌐 Language:', currentLang);
-console.log('📱 WhatsApp Number: +917394869484');
+    console.log('✅ Jamiatuttayyibaat initialized successfully!');
+    console.log('📚 Courses:', COURSES.length);
+    console.log('📱 WhatsApp Number: +917394869484');
+}
+
+// ---- START APP ----
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initApp);
+} else {
+    // DOM already loaded
+    initApp();
+}
 </script>
 </body>
 </html>
