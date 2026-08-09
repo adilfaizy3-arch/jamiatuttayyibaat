@@ -741,7 +741,7 @@ const COURSES = [
         titleAr: 'عالمہ کورس – درس نظامی',
         titleEn: 'Alimah Course — Dars-e-Nizami',
         duration: '5 Years',
-        '₹500'
+        fee: '₹500',
         subjects: [
             '📚 سال اول (پہلا سال) — ناظرہ قرآن مجید | اصول التجوید | قصص النبیین اول | عربی کا معلم اول | دروس اللغۃ العربیہ اول | فارسی کی پہلی کتاب | منہاج العربیہ اول،دوم | تمرین الصرف | عربی صفوۃ المصادر',
             '📚 سال دوم (دوسرا سال) — ترجمہ و تفسیر القرآن | نورالایضاح | ریاض الصالحین | ہدایت النحو نصف اول | اصول حدیث | نحو قاسمی | عربی کا معلم حصہ دوم | دروس اللغۃ العربیہ جزء الثانی | قصص النبیین حصہ دوم | عربی صفوۃ المصادر نصف ثانی | منہاج العربیہ سوم،چہارم',
@@ -758,7 +758,7 @@ const COURSES = [
         titleAr: 'مومنہ کورس',
         titleEn: 'Mominah Course',
         duration: '2 Years',
-        '₹500'
+        fee: '₹500',
         subjects: [
             'Tajweed & Quran Recitation',
             'Islamic Beliefs (Aqidah)',
@@ -774,7 +774,7 @@ const COURSES = [
         titleAr: 'مومنہ کورس ابتدائی',
         titleEn: 'Mominah Course — Beginner',
         duration: '1 Year',
-        '₹500'
+        fee: '₹500',
         subjects: [
             'Basic Quran Reading (Nazirah)',
             'Islamic Etiquette (Adab)',
@@ -791,7 +791,7 @@ const COURSES = [
         titleEn: 'Hifz-ul-Quran for Girls',
         duration: 'Flexible Duration',
         durationAr: 'مدت: طالبہ کی رفتار کے مطابق',
-        '₹500'
+        fee: '₹500',
         subjects: [
             'حفظ قرآن مجید (Quran Memorization)',
             'اصول التجوید (Tajweed Principles)'
@@ -916,7 +916,7 @@ function renderCourseCards(container, maxItems) {
                 <div class="course-title">${currentLang === 'ar' || currentLang === 'ur' ? course.titleAr : course.titleEn}</div>
                 <div class="course-meta">
                     <span>🕐 ${durationDisplay}</span>
-                    <span>💰 <span class="gold-text">$${course.fee}</span></span>
+                    <span>💰 <span class="gold-text">${course.fee}</span></span>
                     <span>📚 ${course.subjects.length} ${t('subjects')}</span>
                 </div>
                 <p style="color:var(--text-muted);font-size:0.9rem;margin:8px 0;">
@@ -978,7 +978,7 @@ function openCourseDetail(courseId) {
                 <div class="english-title">${course.titleEn}</div>
                 <div style="margin-top:16px;">
                     <span class="duration-badge">🕐 ${durationDisplay}</span>
-                    <span class="fee-badge">💰 $${course.fee}</span>
+                    <span class="fee-badge">💰 ${course.fee}</span>
                     ${isHifz ? '<span class="fee-badge" style="background:var(--gold-gradient);color:var(--maroon-dark);">⭐ Self-Paced</span>' : ''}
                 </div>
                 ${isHifz ? `<p style="margin-top:12px;font-size:0.95rem;opacity:0.85;">${currentLang === 'ar' ? course.descriptionAr || 'اپنی رفتار کے مطابق قرآن مجید حفظ کریں' : 'Complete at your own pace with teacher guidance.'}</p>` : ''}
@@ -989,7 +989,7 @@ function openCourseDetail(courseId) {
                 <h3>📋 ${t('courseOverview')} <span class="gold-underline"></span></h3>
                 <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:500px;">
                     <div><strong>${t('duration')}</strong><br>${durationDisplay}</div>
-                    <div><strong>${t('fee')}</strong><br>$${course.fee}</div>
+                    <div><strong>${t('fee')}</strong><br>${course.fee}</div>
                     <div><strong>${t('subjects')}</strong><br>${course.subjects.length}</div>
                 </div>
             </div>
@@ -1055,7 +1055,7 @@ function openAdmissionForm(courseId) {
                 <div class="english-title">${course.titleEn}</div>
                 <div style="margin-top:12px;">
                     <span class="duration-badge">🕐 ${durationDisplay}</span>
-                    <span class="fee-badge">💰 $${course.fee}</span>
+                    <span class="fee-badge">💰 ${course.fee}</span>
                 </div>
             </div>
         </div>
