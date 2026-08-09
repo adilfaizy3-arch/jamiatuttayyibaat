@@ -6,13 +6,7 @@
     <title>Jamiatuttayyibaat — Premium Islamic Education</title>
     <link rel="manifest" href="manifest.json">
     <style>
-        /* =============================================
-           PREMIUM DESIGN SYSTEM
-           ============================================= */
-        
-        /* ---- Reset & Base ---- */
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
         :root {
             --maroon: #5a1e0e;
             --maroon-dark: #3d1509;
@@ -34,7 +28,6 @@
             --font-primary: 'Georgia', 'Times New Roman', serif;
             --font-secondary: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
-
         html { scroll-behavior: smooth; }
         body {
             font-family: var(--font-secondary);
@@ -42,32 +35,22 @@
             color: var(--text-dark);
             line-height: 1.6;
         }
-
-        /* ---- Premium Scrollbar ---- */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: var(--cream); }
         ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: var(--maroon); }
-
-        /* ---- Glassmorphism Utility ---- */
         .glass {
             background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.3);
         }
-
-        /* ---- Premium App Container ---- */
         .app {
             max-width: 1280px;
             margin: 0 auto;
             padding: 20px;
             min-height: 100vh;
         }
-
-        /* =============================================
-           HEADER — Premium Islamic Identity
-           ============================================= */
         header {
             background: linear-gradient(135deg, var(--maroon-dark), var(--maroon));
             color: var(--cream);
@@ -82,7 +65,6 @@
             position: relative;
             overflow: hidden;
         }
-
         header::before {
             content: '';
             position: absolute;
@@ -93,19 +75,8 @@
             background: radial-gradient(circle, rgba(201, 168, 76, 0.08) 0%, transparent 70%);
             pointer-events: none;
         }
-
-        header .brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            z-index: 1;
-        }
-
-        header .brand-icon {
-            font-size: 2.2rem;
-            line-height: 1;
-        }
-
+        header .brand { display: flex; align-items: center; gap: 12px; z-index: 1; }
+        header .brand-icon { font-size: 2.2rem; line-height: 1; }
         header h1 {
             font-family: var(--font-primary);
             font-size: 1.8rem;
@@ -116,7 +87,6 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-
         header .subtitle {
             font-size: 0.7rem;
             text-transform: uppercase;
@@ -124,8 +94,6 @@
             opacity: 0.7;
             font-weight: 300;
         }
-
-        /* ---- Language Switch ---- */
         .lang-switch {
             display: flex;
             gap: 4px;
@@ -135,7 +103,6 @@
             border-radius: var(--radius-small);
             backdrop-filter: blur(10px);
         }
-
         .lang-switch button {
             background: transparent;
             color: var(--cream);
@@ -149,20 +116,12 @@
             transition: var(--transition);
             font-family: var(--font-secondary);
         }
-
-        .lang-switch button:hover {
-            background: rgba(255, 255, 255, 0.15);
-        }
-
+        .lang-switch button:hover { background: rgba(255, 255, 255, 0.15); }
         .lang-switch button.active {
             background: var(--gold);
             color: var(--maroon-dark);
             box-shadow: var(--shadow-gold);
         }
-
-        /* =============================================
-           NAVIGATION — Premium Tabs
-           ============================================= */
         nav {
             display: flex;
             gap: 6px;
@@ -175,7 +134,6 @@
             box-shadow: var(--shadow-soft);
             border: 1px solid rgba(255, 255, 255, 0.6);
         }
-
         nav button {
             background: transparent;
             border: none;
@@ -189,7 +147,6 @@
             font-family: var(--font-secondary);
             position: relative;
         }
-
         nav button::after {
             content: '';
             position: absolute;
@@ -201,45 +158,27 @@
             background: var(--gold);
             transition: var(--transition);
         }
-
-        nav button:hover::after {
-            width: 40%;
-        }
-
+        nav button:hover::after { width: 40%; }
         nav button.active {
             color: var(--maroon);
             background: rgba(90, 30, 14, 0.08);
         }
-
-        nav button.active::after {
-            width: 60%;
-        }
-
-        /* =============================================
-           VIEWS
-           ============================================= */
+        nav button.active::after { width: 60%; }
         .view {
             display: none;
             animation: fadeSlideUp 0.4s ease-out;
         }
-
         .view.active { display: block; }
-
         @keyframes fadeSlideUp {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
-        /* =============================================
-           PREMIUM COURSE CARDS
-           ============================================= */
         .courses-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 24px;
             margin: 20px 0;
         }
-
         .course-card {
             background: #ffffff;
             border-radius: var(--radius-large);
@@ -251,7 +190,6 @@
             overflow: hidden;
             cursor: pointer;
         }
-
         .course-card::before {
             content: '';
             position: absolute;
@@ -263,16 +201,11 @@
             opacity: 0;
             transition: var(--transition);
         }
-
         .course-card:hover {
             transform: translateY(-4px);
             box-shadow: var(--shadow-medium);
         }
-
-        .course-card:hover::before {
-            opacity: 1;
-        }
-
+        .course-card:hover::before { opacity: 1; }
         .course-card .badge-hifz {
             background: var(--gold-gradient);
             color: var(--maroon-dark);
@@ -284,7 +217,6 @@
             letter-spacing: 1px;
             display: inline-block;
         }
-
         .course-card .course-title {
             font-family: var(--font-primary);
             font-size: 1.3rem;
@@ -292,7 +224,6 @@
             color: var(--maroon);
             margin: 12px 0 6px;
         }
-
         .course-card .course-meta {
             display: flex;
             flex-wrap: wrap;
@@ -301,25 +232,14 @@
             font-size: 0.85rem;
             color: var(--text-muted);
         }
-
-        .course-card .course-meta span {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-
-        .course-card .course-meta .gold-text {
-            color: var(--gold);
-            font-weight: 600;
-        }
-
+        .course-card .course-meta span { display: flex; align-items: center; gap: 4px; }
+        .course-card .course-meta .gold-text { color: var(--gold); font-weight: 600; }
         .course-card .course-actions {
             display: flex;
             gap: 10px;
             margin-top: 16px;
             flex-wrap: wrap;
         }
-
         .btn {
             padding: 10px 24px;
             border: none;
@@ -334,51 +254,38 @@
             align-items: center;
             gap: 6px;
         }
-
         .btn-primary {
             background: var(--maroon);
             color: var(--cream);
         }
-
         .btn-primary:hover {
             background: var(--maroon-dark);
             transform: translateY(-2px);
             box-shadow: var(--shadow-soft);
         }
-
         .btn-gold {
             background: var(--gold-gradient);
             color: var(--maroon-dark);
         }
-
         .btn-gold:hover {
             transform: translateY(-2px);
             box-shadow: var(--shadow-gold);
         }
-
         .btn-outline {
             background: transparent;
             color: var(--maroon);
             border: 2px solid var(--maroon);
         }
-
         .btn-outline:hover {
             background: var(--maroon);
             color: var(--cream);
         }
-
-        .btn-sm {
-            padding: 6px 16px;
-            font-size: 0.75rem;
-        }
-
-        /* ---- Hifz Special Card ---- */
+        .btn-sm { padding: 6px 16px; font-size: 0.75rem; }
         .course-card.hifz-card {
             background: linear-gradient(145deg, #fcf8f3, #f5f0eb);
             border-color: var(--gold-light);
             position: relative;
         }
-
         .course-card.hifz-card::after {
             content: '☆';
             position: absolute;
@@ -388,7 +295,6 @@
             color: var(--gold);
             opacity: 0.3;
         }
-
         .course-card.hifz-card .quranic-pattern {
             font-size: 3rem;
             text-align: center;
@@ -400,10 +306,6 @@
             font-family: var(--font-primary);
             line-height: 1;
         }
-
-        /* =============================================
-           PREMIUM COURSE DETAIL MODAL
-           ============================================= */
         .course-detail-overlay {
             position: fixed;
             top: 0;
@@ -421,16 +323,11 @@
             overflow-y: auto;
             animation: fadeIn 0.3s ease-out;
         }
-
-        .course-detail-overlay.active {
-            display: flex;
-        }
-
+        .course-detail-overlay.active { display: flex; }
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-
         .course-detail-modal {
             max-width: 860px;
             width: 100%;
@@ -443,12 +340,10 @@
             max-height: 95vh;
             overflow-y: auto;
         }
-
         @keyframes slideUp {
             from { opacity: 0; transform: translateY(40px) scale(0.98); }
             to { opacity: 1; transform: translateY(0) scale(1); }
         }
-
         .course-detail-modal .modal-close {
             position: sticky;
             top: 0;
@@ -465,12 +360,10 @@
             border-radius: 0 0 0 12px;
             transition: var(--transition);
         }
-
         .course-detail-modal .modal-close:hover {
             background: var(--maroon);
             color: var(--cream);
         }
-
         .course-detail-modal .detail-hero {
             padding: 40px 32px 28px;
             background: linear-gradient(135deg, var(--maroon-dark), var(--maroon));
@@ -478,7 +371,6 @@
             position: relative;
             overflow: hidden;
         }
-
         .course-detail-modal .detail-hero::after {
             content: '';
             position: absolute;
@@ -489,21 +381,18 @@
             background: radial-gradient(circle, rgba(201, 168, 76, 0.12) 0%, transparent 70%);
             pointer-events: none;
         }
-
         .course-detail-modal .detail-hero .arabic-title {
             font-family: var(--font-primary);
             font-size: 2.2rem;
             font-weight: 300;
             letter-spacing: 2px;
         }
-
         .course-detail-modal .detail-hero .english-title {
             font-size: 1.4rem;
             font-weight: 300;
             opacity: 0.8;
             margin-top: 4px;
         }
-
         .course-detail-modal .detail-hero .duration-badge {
             display: inline-block;
             background: var(--gold-gradient);
@@ -515,7 +404,6 @@
             letter-spacing: 0.5px;
             margin-top: 12px;
         }
-
         .course-detail-modal .detail-hero .fee-badge {
             display: inline-block;
             background: rgba(255, 255, 255, 0.15);
@@ -524,15 +412,12 @@
             font-size: 0.8rem;
             margin-left: 8px;
         }
-
         .course-detail-modal .detail-body {
             padding: 28px 32px 40px;
         }
-
         .course-detail-modal .detail-section {
             margin-bottom: 28px;
         }
-
         .course-detail-modal .detail-section h3 {
             font-family: var(--font-primary);
             color: var(--maroon);
@@ -542,20 +427,17 @@
             align-items: center;
             gap: 8px;
         }
-
         .course-detail-modal .detail-section h3 .gold-underline {
             flex: 1;
             height: 2px;
             background: var(--gold-gradient);
             margin-left: 8px;
         }
-
         .course-detail-modal .subjects-list {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 8px;
         }
-
         .course-detail-modal .subjects-list li {
             list-style: none;
             padding: 10px 16px;
@@ -564,8 +446,6 @@
             border-left: 3px solid var(--gold);
             font-size: 0.95rem;
         }
-
-        /* ---- Accordion Syllabus ---- */
         .accordion-item {
             border: 1px solid rgba(201, 168, 76, 0.15);
             border-radius: var(--radius-small);
@@ -573,11 +453,7 @@
             overflow: hidden;
             transition: var(--transition);
         }
-
-        .accordion-item:hover {
-            border-color: var(--gold-light);
-        }
-
+        .accordion-item:hover { border-color: var(--gold-light); }
         .accordion-header {
             width: 100%;
             padding: 14px 20px;
@@ -593,42 +469,24 @@
             transition: var(--transition);
             font-family: var(--font-secondary);
         }
-
-        .accordion-header:hover {
-            background: #e8ddd6;
-        }
-
+        .accordion-header:hover { background: #e8ddd6; }
         .accordion-header .arrow {
             transition: var(--transition);
             color: var(--gold);
         }
-
-        .accordion-header.open .arrow {
-            transform: rotate(180deg);
-        }
-
+        .accordion-header.open .arrow { transform: rotate(180deg); }
         .accordion-body {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease-out;
             padding: 0 20px;
         }
-
         .accordion-body.open {
             max-height: 400px;
             padding: 16px 20px 20px;
         }
-
-        .accordion-body ul {
-            padding-left: 20px;
-        }
-
-        .accordion-body ul li {
-            padding: 4px 0;
-            color: var(--text-muted);
-        }
-
-        /* ---- Premium CTA ---- */
+        .accordion-body ul { padding-left: 20px; }
+        .accordion-body ul li { padding: 4px 0; color: var(--text-muted); }
         .cta-section {
             background: linear-gradient(135deg, var(--cream), #e8ddd6);
             border-radius: var(--radius-medium);
@@ -637,123 +495,56 @@
             margin-top: 20px;
             border: 1px solid rgba(201, 168, 76, 0.2);
         }
-
         .cta-section h3 {
             font-family: var(--font-primary);
             color: var(--maroon);
             font-size: 1.4rem;
             margin-bottom: 8px;
         }
-
         .cta-section p {
             color: var(--text-muted);
             margin-bottom: 16px;
         }
-
         .cta-section .btn {
             font-size: 1rem;
             padding: 14px 40px;
         }
-
-        /* =============================================
-           RESPONSIVE
-           ============================================= */
         @media (max-width: 768px) {
             .app { padding: 12px; }
-            
             header {
                 padding: 16px 20px;
                 flex-direction: column;
                 align-items: stretch;
                 text-align: center;
             }
-
             header .brand { justify-content: center; }
             header h1 { font-size: 1.4rem; }
             .lang-switch { justify-content: center; }
-
             nav { gap: 4px; padding: 6px 8px; justify-content: center; }
             nav button { padding: 6px 12px; font-size: 0.7rem; }
-
-            .courses-grid {
-                grid-template-columns: 1fr;
-                gap: 16px;
-            }
-
+            .courses-grid { grid-template-columns: 1fr; gap: 16px; }
             .course-card { padding: 20px 16px; }
-
-            .course-detail-modal .detail-hero {
-                padding: 28px 20px 20px;
-            }
-
-            .course-detail-modal .detail-hero .arabic-title {
-                font-size: 1.6rem;
-            }
-
-            .course-detail-modal .detail-body {
-                padding: 20px 16px 28px;
-            }
-
-            .course-detail-modal .subjects-list {
-                grid-template-columns: 1fr;
-            }
-
-            .course-detail-overlay {
-                padding: 12px;
-                align-items: stretch;
-            }
-
-            .course-detail-modal {
-                max-height: 98vh;
-                border-radius: var(--radius-medium);
-            }
-
-            .cta-section {
-                padding: 24px 16px;
-            }
-
-            .cta-section .btn {
-                width: 100%;
-                justify-content: center;
-            }
-
-            .course-card .course-actions {
-                flex-direction: column;
-            }
-
-            .course-card .course-actions .btn {
-                width: 100%;
-                justify-content: center;
-            }
+            .course-detail-modal .detail-hero { padding: 28px 20px 20px; }
+            .course-detail-modal .detail-hero .arabic-title { font-size: 1.6rem; }
+            .course-detail-modal .detail-body { padding: 20px 16px 28px; }
+            .course-detail-modal .subjects-list { grid-template-columns: 1fr; }
+            .course-detail-overlay { padding: 12px; align-items: stretch; }
+            .course-detail-modal { max-height: 98vh; border-radius: var(--radius-medium); }
+            .cta-section { padding: 24px 16px; }
+            .cta-section .btn { width: 100%; justify-content: center; }
+            .course-card .course-actions { flex-direction: column; }
+            .course-card .course-actions .btn { width: 100%; justify-content: center; }
         }
-
         @media (max-width: 480px) {
             header h1 { font-size: 1.1rem; }
             .course-detail-modal .detail-hero .arabic-title { font-size: 1.2rem; }
             .course-detail-modal .detail-hero .english-title { font-size: 0.9rem; }
             .detail-body .subjects-list li { font-size: 0.85rem; }
         }
-
-        /* ---- RTL Support ---- */
-        [dir="rtl"] .accordion-header .arrow {
-            transform: rotate(180deg);
-        }
-
-        [dir="rtl"] .accordion-header.open .arrow {
-            transform: rotate(0deg);
-        }
-
-        [dir="rtl"] .course-card.hifz-card::after {
-            right: auto;
-            left: 16px;
-        }
-
-        [dir="rtl"] .course-detail-modal .modal-close {
-            float: left;
-            border-radius: 0 0 12px 0;
-        }
-
-        /* ---- Accessibility ---- */
+        [dir="rtl"] .accordion-header .arrow { transform: rotate(180deg); }
+        [dir="rtl"] .accordion-header.open .arrow { transform: rotate(0deg); }
+        [dir="rtl"] .course-card.hifz-card::after { right: auto; left: 16px; }
+        [dir="rtl"] .course-detail-modal .modal-close { float: left; border-radius: 0 0 12px 0; }
         @media (prefers-reduced-motion: reduce) {
             * {
                 animation-duration: 0.01ms !important;
@@ -761,14 +552,10 @@
                 transition-duration: 0.01ms !important;
             }
         }
-
-        /* Focus states */
         button:focus-visible {
             outline: 3px solid var(--gold);
             outline-offset: 2px;
         }
-
-        /* ---- Utility ---- */
         .text-gold { color: var(--gold); }
         .text-muted { color: var(--text-muted); }
         .mt-8 { margin-top: 8px; }
@@ -777,8 +564,6 @@
         .flex-center { display: flex; align-items: center; justify-content: center; }
         .text-center { text-align: center; }
         .w-full { width: 100%; }
-
-        /* ---- Empty State ---- */
         .empty-state {
             text-align: center;
             padding: 60px 20px;
@@ -788,11 +573,7 @@
     </style>
 </head>
 <body>
-
 <div class="app" id="app">
-    <!-- ==========================================
-    HEADER
-    ========================================== -->
     <header>
         <div class="brand">
             <span class="brand-icon">🌙</span>
@@ -809,9 +590,6 @@
         </div>
     </header>
 
-    <!-- ==========================================
-    NAVIGATION
-    ========================================== -->
     <nav id="mainNav">
         <button data-view="home" class="active">🏠 Home</button>
         <button data-view="courses">📚 Courses</button>
@@ -820,9 +598,6 @@
         <button data-view="rules">📋 Rules</button>
     </nav>
 
-    <!-- ==========================================
-    VIEW: HOME
-    ========================================== -->
     <div id="view-home" class="view active">
         <div style="text-align:center;padding:20px 0 10px;">
             <h2 style="font-family:var(--font-primary);font-size:2.4rem;color:var(--maroon);">
@@ -832,12 +607,7 @@
                 A premium Islamic educational institution dedicated to women's learning
             </p>
         </div>
-
-        <!-- Featured Courses -->
-        <div class="courses-grid" id="homeCourses">
-            <!-- Will be rendered by JavaScript -->
-        </div>
-
+        <div class="courses-grid" id="homeCourses"></div>
         <div style="text-align:center;margin:32px 0 16px;">
             <button class="btn btn-gold" onclick="navigateTo('courses')">
                 📚 View All Courses
@@ -845,9 +615,6 @@
         </div>
     </div>
 
-    <!-- ==========================================
-    VIEW: COURSES
-    ========================================== -->
     <div id="view-courses" class="view">
         <h2 style="font-family:var(--font-primary);color:var(--maroon);font-size:2rem;text-align:center;margin:12px 0 4px;">
             📚 Our Courses
@@ -855,14 +622,9 @@
         <p style="text-align:center;color:var(--text-muted);margin-bottom:20px;">
             Premium Islamic education programs for women
         </p>
-        <div class="courses-grid" id="coursesGrid">
-            <!-- Will be rendered by JavaScript -->
-        </div>
+        <div class="courses-grid" id="coursesGrid"></div>
     </div>
 
-    <!-- ==========================================
-    VIEW: DASHBOARD
-    ========================================== -->
     <div id="view-dashboard" class="view">
         <h2 style="font-family:var(--font-primary);color:var(--maroon);">📊 Dashboard</h2>
         <div id="dashboardContent">
@@ -873,22 +635,11 @@
         </div>
     </div>
 
-    <!-- ==========================================
-    VIEW: TEACHERS
-    ========================================== -->
     <div id="view-teachers" class="view">
         <h2 style="font-family:var(--font-primary);color:var(--maroon);">👨‍🏫 Our Teachers</h2>
-        <div id="teachersContent">
-            <div class="empty-state">
-                <div class="icon">👨‍🏫</div>
-                <p>Teacher information will appear here</p>
-            </div>
-        </div>
+        <div id="teachersContent"></div>
     </div>
 
-    <!-- ==========================================
-    VIEW: RULES
-    ========================================== -->
     <div id="view-rules" class="view">
         <h2 style="font-family:var(--font-primary);color:var(--maroon);">📋 Academic Rules</h2>
         <div id="rulesContent">
@@ -899,15 +650,10 @@
         </div>
     </div>
 
-    <!-- ==========================================
-    PREMIUM COURSE DETAIL MODAL
-    ========================================== -->
     <div class="course-detail-overlay" id="courseDetailOverlay">
         <div class="course-detail-modal" id="courseDetailModal">
             <button class="modal-close" onclick="closeCourseDetail()">✕</button>
-            <div id="courseDetailContent">
-                <!-- Rendered by JavaScript -->
-            </div>
+            <div id="courseDetailContent"></div>
         </div>
     </div>
 
@@ -921,7 +667,6 @@
 // COMPLETE PREMIUM IMPLEMENTATION
 // ================================================================
 
-// ---- COURSE DATA ----
 const COURSES = [
     {
         id: 'alima',
@@ -930,13 +675,13 @@ const COURSES = [
         duration: '5 Years',
         fee: '500',
         subjects: [
-            'Year 1: Arabic Grammar (نحو / صرف)',
-            'Year 2: Quranic Exegesis (تفسیر)',
-            'Year 3: Hadith Studies (حدیث)',
-            'Year 4: Islamic Jurisprudence (فقہ)',
-            'Year 5: نصاب جلد شامل کیا جائے گا'
+            '📚 سال اول (پہلا سال) — ناظرہ قرآن مجید | اصول التجوید | قصص النبیین اول | عربی کا معلم اول | دروس اللغۃ العربیہ اول | فارسی کی پہلی کتاب | منہاج العربیہ اول،دوم | تمرین الصرف | عربی صفوۃ المصادر',
+            '📚 سال دوم (دوسرا سال) — ترجمہ و تفسیر القرآن | نورالایضاح | ریاض الصالحین | ہدایت النحو نصف اول | اصول حدیث | نحو قاسمی | عربی کا معلم حصہ دوم | دروس اللغۃ العربیہ جزء الثانی | قصص النبیین حصہ دوم | عربی صفوۃ المصادر نصف ثانی | منہاج العربیہ سوم،چہارم',
+            '📚 سال سوم (تیسرا سال) — ترجمہ و تفسیر القرآن | مختصر القدوری | ریاض الصالحین | شرح الوقایہ | اصول الشاشی | منثورات من ادب العرب | القرءۃ الراشدہ مکمل حصے | علم الصیغہ اُردو | آسان صرف مکمل حصے | آسان نحو مکمل حصے | عربی صفوۃ المصادر مابقی | ہدایت النحو نصف آخر | اصول حدیث نصف آخر',
+            '📚 سال چہارم (چوتھا سال) — جلالین شریف اول و ثانی | مشکٰوۃ شریف | ہدایہ شریف | مختارات من ادب العرب | الفوز الکبیر فی اصول التفسیر | معلم الانشاء | معین الفرائض | عربی تکلم و عربی مضمون',
+            '📚 سال پنجم (پانچواں سال) — نصاب جلد شامل کیا جائے گا (Coming Soon)'
         ],
-        description: 'A comprehensive 5-year Alimah program covering Quran, Hadith, Fiqh, and Islamic sciences.',
+        description: 'A comprehensive 5-year Alimah program covering Quran, Hadith, Fiqh, and Islamic sciences with detailed yearly syllabus.',
         icon: '📖',
         isHifz: false
     },
@@ -991,106 +736,48 @@ const COURSES = [
     }
 ];
 
-// ---- I18N ----
 const LANG = {
     en: {
-        home: 'Home',
-        courses: 'Courses',
-        dashboard: 'Dashboard',
-        teachers: 'Teachers',
-        rules: 'Rules',
-        viewSyllabus: 'View Syllabus',
-        applyAdmission: 'Apply for Admission',
-        admissionOpen: 'Admission Open',
-        courseOverview: 'Course Overview',
-        duration: 'Duration',
-        fee: 'Fee',
-        subjects: 'Subjects',
-        completeSyllabus: 'Complete Syllabus',
-        academicRules: 'Academic Rules',
-        flexibleDuration: 'Flexible Duration',
-        applyNow: 'Apply Now',
-        welcome: 'Welcome to Jamiatuttayyibaat',
+        home: 'Home', courses: 'Courses', dashboard: 'Dashboard', teachers: 'Teachers', rules: 'Rules',
+        viewSyllabus: 'View Syllabus', applyAdmission: 'Apply for Admission', admissionOpen: 'Admission Open',
+        courseOverview: 'Course Overview', duration: 'Duration', fee: 'Fee', subjects: 'Subjects',
+        completeSyllabus: 'Complete Syllabus', academicRules: 'Academic Rules', flexibleDuration: 'Flexible Duration',
+        applyNow: 'Apply Now', welcome: 'Welcome to Jamiatuttayyibaat',
         subtitle: 'A premium Islamic educational institution dedicated to women\'s learning',
-        ourCourses: 'Our Courses',
-        allCourses: 'View All Courses',
-        noData: 'No data available'
+        ourCourses: 'Our Courses', allCourses: 'View All Courses', noData: 'No data available'
     },
     hi: {
-        home: 'होम',
-        courses: 'कोर्सेज़',
-        dashboard: 'डैशबोर्ड',
-        teachers: 'शिक्षक',
-        rules: 'नियम',
-        viewSyllabus: 'पाठ्यक्रम देखें',
-        applyAdmission: 'प्रवेश के लिए आवेदन करें',
-        admissionOpen: 'प्रवेश खुले हैं',
-        courseOverview: 'कोर्स अवलोकन',
-        duration: 'अवधि',
-        fee: 'शुल्क',
-        subjects: 'विषय',
-        completeSyllabus: 'पूरा पाठ्यक्रम',
-        academicRules: 'शैक्षणिक नियम',
-        flexibleDuration: 'लचीली अवधि',
-        applyNow: 'अभी आवेदन करें',
-        welcome: 'जामियातुतय्यिबात में स्वागत है',
+        home: 'होम', courses: 'कोर्सेज़', dashboard: 'डैशबोर्ड', teachers: 'शिक्षक', rules: 'नियम',
+        viewSyllabus: 'पाठ्यक्रम देखें', applyAdmission: 'प्रवेश के लिए आवेदन करें', admissionOpen: 'प्रवेश खुले हैं',
+        courseOverview: 'कोर्स अवलोकन', duration: 'अवधि', fee: 'शुल्क', subjects: 'विषय',
+        completeSyllabus: 'पूरा पाठ्यक्रम', academicRules: 'शैक्षणिक नियम', flexibleDuration: 'लचीली अवधि',
+        applyNow: 'अभी आवेदन करें', welcome: 'जामियातुतय्यिबात में स्वागत है',
         subtitle: 'महिलाओं की शिक्षा के लिए समर्पित एक प्रीमियम इस्लामिक शैक्षणिक संस्थान',
-        ourCourses: 'हमारे कोर्सेज़',
-        allCourses: 'सभी कोर्सेज़ देखें',
-        noData: 'कोई डेटा उपलब्ध नहीं'
+        ourCourses: 'हमारे कोर्सेज़', allCourses: 'सभी कोर्सेज़ देखें', noData: 'कोई डेटा उपलब्ध नहीं'
     },
     ur: {
-        home: 'ہوم',
-        courses: 'کورسز',
-        dashboard: 'ڈیش بورڈ',
-        teachers: 'اساتذہ',
-        rules: 'قواعد',
-        viewSyllabus: 'نصاب دیکھیں',
-        applyAdmission: 'داخلے کے لیے درخواست دیں',
-        admissionOpen: 'داخلے کھلے ہیں',
-        courseOverview: 'کورس کا جائزہ',
-        duration: 'مدت',
-        fee: 'فیس',
-        subjects: 'مضامین',
-        completeSyllabus: 'مکمل نصاب',
-        academicRules: 'تعلیمی قواعد',
-        flexibleDuration: 'لچکدار مدت',
-        applyNow: 'ابھی درخواست دیں',
-        welcome: 'جامعتطیبات میں خوش آمدید',
+        home: 'ہوم', courses: 'کورسز', dashboard: 'ڈیش بورڈ', teachers: 'اساتذہ', rules: 'قواعد',
+        viewSyllabus: 'نصاب دیکھیں', applyAdmission: 'داخلے کے لیے درخواست دیں', admissionOpen: 'داخلے کھلے ہیں',
+        courseOverview: 'کورس کا جائزہ', duration: 'مدت', fee: 'فیس', subjects: 'مضامین',
+        completeSyllabus: 'مکمل نصاب', academicRules: 'تعلیمی قواعد', flexibleDuration: 'لچکدار مدت',
+        applyNow: 'ابھی درخواست دیں', welcome: 'جامعتطیبات میں خوش آمدید',
         subtitle: 'خواتین کی تعلیم کے لیے وقف ایک پریمیم اسلامی تعلیمی ادارہ',
-        ourCourses: 'ہمارے کورسز',
-        allCourses: 'تمام کورسز دیکھیں',
-        noData: 'کوئی ڈیٹا دستیاب نہیں'
+        ourCourses: 'ہمارے کورسز', allCourses: 'تمام کورسز دیکھیں', noData: 'کوئی ڈیٹا دستیاب نہیں'
     },
     ar: {
-        home: 'الرئيسية',
-        courses: 'الدورات',
-        dashboard: 'لوحة التحكم',
-        teachers: 'المعلمون',
-        rules: 'القواعد',
-        viewSyllabus: 'عرض المنهج',
-        applyAdmission: 'التقدم للقبول',
-        admissionOpen: 'القبول مفتوح',
-        courseOverview: 'نظرة عامة على الدورة',
-        duration: 'المدة',
-        fee: 'الرسوم',
-        subjects: 'المواد',
-        completeSyllabus: 'المنهج الكامل',
-        academicRules: 'القواعد الأكاديمية',
-        flexibleDuration: 'مدة مرنة',
-        applyNow: 'قدم الآن',
-        welcome: 'مرحبًا بكم في جامعة الطيبات',
+        home: 'الرئيسية', courses: 'الدورات', dashboard: 'لوحة التحكم', teachers: 'المعلمون', rules: 'القواعد',
+        viewSyllabus: 'عرض المنهج', applyAdmission: 'التقدم للقبول', admissionOpen: 'القبول مفتوح',
+        courseOverview: 'نظرة عامة على الدورة', duration: 'المدة', fee: 'الرسوم', subjects: 'المواد',
+        completeSyllabus: 'المنهج الكامل', academicRules: 'القواعد الأكاديمية', flexibleDuration: 'مدة مرنة',
+        applyNow: 'قدم الآن', welcome: 'مرحبًا بكم في جامعة الطيبات',
         subtitle: 'مؤسسة تعليمية إسلامية متميزة مخصصة لتعليم المرأة',
-        ourCourses: 'دوراتنا',
-        allCourses: 'عرض جميع الدورات',
-        noData: 'لا تتوفر بيانات'
+        ourCourses: 'دوراتنا', allCourses: 'عرض جميع الدورات', noData: 'لا تتوفر بيانات'
     }
 };
 
 let currentLang = 'en';
 let currentView = 'home';
 
-// ---- DOM References ----
 const langSwitch = document.getElementById('langSwitch');
 const mainNav = document.getElementById('mainNav');
 const homeCourses = document.getElementById('homeCourses');
@@ -1098,17 +785,12 @@ const coursesGrid = document.getElementById('coursesGrid');
 const detailOverlay = document.getElementById('courseDetailOverlay');
 const detailContent = document.getElementById('courseDetailContent');
 
-// ---- Language Functions ----
-function t(key) {
-    return LANG[currentLang]?.[key] || key;
-}
+function t(key) { return LANG[currentLang]?.[key] || key; }
 
 function setLanguage(lang) {
     currentLang = lang;
     document.querySelectorAll('#langSwitch button').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
-    // Update RTL
     document.documentElement.dir = (lang === 'ar' || lang === 'ur') ? 'rtl' : 'ltr';
-    // Update UI
     updateNavLabels();
     renderCourses();
     renderHomeCourses();
@@ -1117,22 +799,14 @@ function setLanguage(lang) {
 function updateNavLabels() {
     document.querySelectorAll('#mainNav button').forEach(btn => {
         const view = btn.dataset.view;
-        const labelMap = {
-            home: t('home'),
-            courses: t('courses'),
-            dashboard: t('dashboard'),
-            teachers: t('teachers'),
-            rules: t('rules')
-        };
+        const labelMap = { home: t('home'), courses: t('courses'), dashboard: t('dashboard'), teachers: t('teachers'), rules: t('rules') };
         if (labelMap[view]) {
-            // Keep the emoji if present
             const emoji = btn.textContent.match(/^[^\w]+/);
             btn.textContent = (emoji ? emoji[0] : '') + ' ' + labelMap[view];
         }
     });
 }
 
-// ---- Navigation ----
 function navigateTo(view) {
     currentView = view;
     document.querySelectorAll('#mainNav button').forEach(btn => {
@@ -1141,8 +815,6 @@ function navigateTo(view) {
     document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
     const target = document.getElementById('view-' + view);
     if (target) target.classList.add('active');
-    
-    // Render content based on view
     if (view === 'home') renderHomeCourses();
     if (view === 'courses') renderCourses();
     if (view === 'dashboard') renderDashboard();
@@ -1150,7 +822,6 @@ function navigateTo(view) {
     if (view === 'rules') renderRules();
 }
 
-// ---- Render Course Cards ----
 function renderCourseCards(container, maxItems) {
     const items = maxItems ? COURSES.slice(0, maxItems) : COURSES;
     container.innerHTML = items.map(course => {
@@ -1158,7 +829,6 @@ function renderCourseCards(container, maxItems) {
         const durationDisplay = course.flexibleDuration 
             ? (currentLang === 'ar' ? course.durationAr || t('flexibleDuration') : t('flexibleDuration'))
             : course.duration;
-        
         return `
             <div class="course-card ${isHifz ? 'hifz-card' : ''}" onclick="openCourseDetail('${course.id}')" role="button" tabindex="0">
                 ${isHifz ? `<div class="badge-hifz">⭐ Hifz Program</div>` : ''}
@@ -1185,29 +855,20 @@ function renderCourseCards(container, maxItems) {
     }).join('');
 }
 
-function renderHomeCourses() {
-    renderCourseCards(homeCourses, 3);
-}
+function renderHomeCourses() { renderCourseCards(homeCourses, 3); }
+function renderCourses() { renderCourseCards(coursesGrid); }
 
-function renderCourses() {
-    renderCourseCards(coursesGrid);
-}
-
-// ---- Open Course Detail (Premium Experience) ----
 function openCourseDetail(courseId) {
     const course = COURSES.find(c => c.id === courseId);
     if (!course) return;
-
     const isHifz = course.isHifz || false;
     const durationDisplay = course.flexibleDuration 
         ? (currentLang === 'ar' ? course.durationAr || t('flexibleDuration') : t('flexibleDuration'))
         : course.duration;
     
-    // Build subjects HTML with accordion for Alimah
     let subjectsHtml = '';
     if (course.id === 'alima') {
         subjectsHtml = course.subjects.map((subject, index) => {
-            const year = index + 1;
             const isYear5 = index === 4;
             return `
                 <div class="accordion-item">
@@ -1242,24 +903,18 @@ function openCourseDetail(courseId) {
             </div>
         </div>
         <div class="detail-body">
-            <!-- Overview -->
             <div class="detail-section">
                 <h3>📋 ${t('courseOverview')} <span class="gold-underline"></span></h3>
                 <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:500px;">
                     <div><strong>${t('duration')}</strong><br>${durationDisplay}</div>
                     <div><strong>${t('fee')}</strong><br>$${course.fee}</div>
                     <div><strong>${t('subjects')}</strong><br>${course.subjects.length}</div>
-                    ${course.duration !== 'Flexible Duration' && !course.flexibleDuration ? `<div><strong>${t('duration')}</strong><br>${course.duration}</div>` : ''}
                 </div>
             </div>
-
-            <!-- Syllabus -->
             <div class="detail-section">
                 <h3>📖 ${t('completeSyllabus')} <span class="gold-underline"></span></h3>
                 ${subjectsHtml}
             </div>
-
-            <!-- Academic Rules -->
             <div class="detail-section">
                 <h3>📋 ${t('academicRules')} <span class="gold-underline"></span></h3>
                 <ul style="padding-left:20px;color:var(--text-muted);">
@@ -1269,8 +924,6 @@ function openCourseDetail(courseId) {
                     ${isHifz ? '<li>Flexible completion based on student pace</li>' : ''}
                 </ul>
             </div>
-
-            <!-- Admission CTA -->
             <div class="cta-section">
                 <h3>🎓 ${t('admissionOpen')}</h3>
                 <p>${isHifz ? 'Flexible Duration — completion depends on the student\'s pace and progress.' : 'Join our premium program and begin your journey of Islamic knowledge.'}</p>
@@ -1280,7 +933,6 @@ function openCourseDetail(courseId) {
             </div>
         </div>
     `;
-
     detailOverlay.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
@@ -1293,7 +945,6 @@ function closeCourseDetail() {
 function toggleAccordion(header) {
     const body = header.nextElementSibling;
     const isOpen = body.classList.contains('open');
-    // Close all siblings in same parent
     const parent = header.closest('.detail-section');
     parent.querySelectorAll('.accordion-body').forEach(b => {
         b.classList.remove('open');
@@ -1305,7 +956,6 @@ function toggleAccordion(header) {
     }
 }
 
-// ---- Apply Admission ----
 function applyAdmission(courseId) {
     const course = COURSES.find(c => c.id === courseId);
     if (!course) return;
@@ -1318,7 +968,6 @@ function applyAdmission(courseId) {
     window.open(`mailto:admissions@jamiatuttayyibaat.com?subject=Admission%20Application%20-%20${encodeURIComponent(course.titleEn)}&body=${msg}`, '_blank');
 }
 
-// ---- Dashboard, Teachers, Rules (Placeholders) ----
 function renderDashboard() {
     const container = document.getElementById('dashboardContent');
     container.innerHTML = `
@@ -1329,7 +978,7 @@ function renderDashboard() {
             </div>
             <div class="course-card" style="padding:20px;">
                 <h3 style="color:var(--maroon);">👨‍🏫 Teachers</h3>
-                <p>4 Faculty Members</p>
+                <p>3 Faculty Members</p>
             </div>
             <div class="course-card" style="padding:20px;">
                 <h3 style="color:var(--maroon);">📋 Rules</h3>
@@ -1348,10 +997,9 @@ function renderTeachers() {
     const container = document.getElementById('teachersContent');
     container.innerHTML = `
         <div class="courses-grid" style="grid-template-columns:repeat(auto-fill,minmax(250px,1fr));">
-            <div class="course-card"><h3 style="color:var(--maroon);">👨‍🏫 Ustadha Fatima</h3><p>Quran & Tajweed</p></div>
-            <div class="course-card"><h3 style="color:var(--maroon);">👨‍🏫 Ustadha Aisha</h3><p>Hadith & Fiqh</p></div>
-            <div class="course-card"><h3 style="color:var(--maroon);">👨‍🏫 Ustadha Khadija</h3><p>Arabic & Tafsir</p></div>
-            <div class="course-card"><h3 style="color:var(--maroon);">👨‍🏫 Ustadha Maryam</h3><p>Islamic History</p></div>
+            <div class="course-card"><h3 style="color:var(--maroon);">👩‍🏫 Ustadha Shariba</h3><p>Quran & Tajweed</p></div>
+            <div class="course-card"><h3 style="color:var(--maroon);">👩‍🏫 Ustadha Nadeema</h3><p>Hadith & Fiqh</p></div>
+            <div class="course-card"><h3 style="color:var(--maroon);">👩‍🏫 Ustadha Shadma</h3><p>Arabic & Tafsir</p></div>
         </div>
     `;
 }
@@ -1368,7 +1016,6 @@ function renderRules() {
     `;
 }
 
-// ---- Event Listeners ----
 langSwitch.addEventListener('click', (e) => {
     const btn = e.target.closest('button');
     if (!btn || !btn.dataset.lang) return;
@@ -1381,26 +1028,21 @@ mainNav.addEventListener('click', (e) => {
     navigateTo(btn.dataset.view);
 });
 
-// Close modal on backdrop click
 detailOverlay.addEventListener('click', (e) => {
     if (e.target === detailOverlay) closeCourseDetail();
 });
 
-// Keyboard: Escape to close modal
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeCourseDetail();
 });
 
-// ---- Init ----
 setLanguage('en');
 navigateTo('home');
 
-// Log for verification
 console.log('✅ Jamiatuttayyibaat Premium UI loaded');
 console.log('📚 Courses:', COURSES.length);
 console.log('🌐 Language:', currentLang);
 console.log('⭐ Hifz Course: Flexible Duration ✓');
-
 </script>
 </body>
 </html>
