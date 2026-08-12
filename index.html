@@ -4,170 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jamiatut Tayyibaat - Premium Islamic Institute</title>
-    
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#5a1e0e">
+    <link rel="icon" href="icon-192.png" type="image/png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Jamiatut Tayyibaat">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- SEO -->
+    <meta name="description" content="Jamiatut Tayyibaat — a premium Islamic institute offering Tajweed & Quran, Islamic Jurisprudence, and Arabic & Modern Tech courses, blending authentic Islamic knowledge with modern excellence.">
+    <meta name="keywords" content="Jamiatut Tayyibaat, Islamic institute, Tajweed, Quran classes, Islamic Jurisprudence, Fiqh, learn Arabic online, جامعۃ الطیبات">
+
     <!-- Google Search Console Verification -->
     <meta name="google-site-verification" content="wTSRzcmUaEB4nKCwbedh7kZqwv9QbnSV_bi9Fe1PPsM" />
     <meta name="google" content="notranslate" />
-    
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Jamiatut Tayyibaat - Premium Islamic Institute">
+    <meta property="og:description" content="Illuminating minds with authentic Islamic knowledge and modern excellence.">
+    <meta property="og:type" content="website">
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
-    
+
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <style>
-        /* ========== CSS START ========== */
-        :root {
-            --primary: #5a1e0e;
-            --primary-light: #7a2a1a;
-            --gold: #f4c542;
-            --gold-dark: #d4a530;
-            --white: #ffffff;
-            --light-bg: #f8f9fa;
-            --text-dark: #333333;
-            --shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--light-bg);
-            color: var(--text-dark);
-            overflow-x: hidden;
-        }
-
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-
-        /* ===== HEADER / NAVBAR ===== */
-        header {
-            background: var(--primary);
-            padding: 1rem 0;
-            position: fixed; width: 100%; top: 0; z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.2);
-            transition: 0.3s;
-        }
-        header.scrolled { background: rgba(90, 30, 14, 0.95); backdrop-filter: blur(10px); }
-
-        .nav-container {
-            display: flex; justify-content: space-between; align-items: center;
-        }
-
-        .logo {
-            font-family: 'Amiri', serif; font-size: 1.8rem;
-            font-weight: 700; color: var(--white); text-decoration: none;
-        }
-        .logo span { color: var(--gold); }
-
-        .nav-right { display: flex; align-items: center; gap: 1.5rem; }
-
-        .nav-links {
-            list-style: none; display: flex; gap: 2rem;
-        }
-        .nav-links a {
-            color: var(--white); text-decoration: none; font-weight: 500; transition: 0.3s; position: relative;
-        }
-        .nav-links a::after {
-            content: ''; position: absolute; width: 0; height: 2px;
-            bottom: -5px; left: 0; background: var(--gold); transition: 0.3s;
-        }
-        .nav-links a:hover::after { width: 100%; }
-
-        /* Language Selector */
-        .lang-select {
-            padding: 6px 12px; border-radius: 20px; border: 1px solid var(--gold);
-            background: transparent; color: var(--white); font-family: inherit; cursor: pointer;
-            outline: none; transition: 0.3s;
-        }
-        .lang-select:hover { background: var(--gold); color: var(--primary); }
-        .lang-select option { color: var(--text-dark); }
-
-        /* Mobile Menu */
-        .hamburger { display: none; cursor: pointer; color: var(--white); font-size: 1.8rem; }
-
-        /* ===== HERO SECTION ===== */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(135deg, var(--primary), var(--primary-light));
-            display: flex; align-items: center; justify-content: center;
-            text-align: center; color: var(--white); position: relative; overflow: hidden;
-        }
-        .hero::before {
-            content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
-            background: radial-gradient(circle, rgba(244, 197, 66, 0.1) 0%, transparent 60%);
-            animation: rotateBg 30s linear infinite; z-index: 0;
-        }
-        @keyframes rotateBg { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-
-        .hero-content { position: relative; z-index: 1; max-width: 800px; padding: 0 20px; }
-        .hero h1 { font-family: 'Amiri', serif; font-size: 4rem; margin-bottom: 1rem; animation: fadeInUp 1s ease-out; }
-        .hero p { font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9; animation: fadeInUp 1.2s ease-out; }
-
-        .btn-primary {
-            display: inline-block; background: var(--gold); color: var(--primary);
-            padding: 14px 40px; border-radius: 50px; text-decoration: none; font-weight: 600;
-            font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(244, 197, 66, 0.4);
-            animation: fadeInUp 1.4s ease-out;
-        }
-        .btn-primary:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 8px 25px rgba(244, 197, 66, 0.6); background: var(--gold-dark); }
-
-        /* ===== SECTIONS ===== */
-        .section { padding: 100px 0; }
-        .section-title {
-            font-family: 'Amiri', serif; font-size: 2.8rem;
-            color: var(--primary); text-align: center; margin-bottom: 3rem; position: relative;
-        }
-        .section-title::after {
-            content: ''; position: absolute; width: 60px; height: 4px;
-            background: var(--gold); bottom: -10px; left: 50%; transform: translateX(-50%); border-radius: 2px;
-        }
-
-        .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-        .about-text p { font-size: 1.1rem; line-height: 1.8; color: #555; margin-bottom: 1.5rem; }
-        .about-image {
-            background: var(--primary); border-radius: 20px; height: 300px;
-            display: flex; align-items: center; justify-content: center;
-            color: var(--white); font-size: 5rem; box-shadow: var(--shadow);
-        }
-
-        #courses { background: var(--light-bg); }
-        .courses-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; }
-        
-        .course-card {
-            background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px); padding: 2.5rem 2rem;
-            border-radius: 20px; text-align: center; box-shadow: 0 8px 32px rgba(0,0,0,0.05);
-            border: 1px solid rgba(255, 255, 255, 0.18); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        .course-card:hover { transform: translateY(-15px); background: rgba(255, 255, 255, 0.95); box-shadow: 0 15px 40px rgba(0,0,0,0.12); border-color: var(--gold); }
-        .course-card i { font-size: 3.5rem; color: var(--gold); margin-bottom: 1.5rem; }
-        .course-card h3 { font-size: 1.5rem; color: var(--primary); margin-bottom: 1rem; }
-        .course-card p { color: #666; line-height: 1.6; }
-
-        /* ===== FOOTER ===== */
-        footer { background: #1a1a1a; color: #aaa; padding: 3rem 0 1.5rem; text-align: center; }
-        footer .socials { margin-bottom: 1.5rem; }
-        footer .socials a { color: #aaa; font-size: 1.5rem; margin: 0 10px; transition: 0.3s; }
-        footer .socials a:hover { color: var(--gold); transform: translateY(-3px); }
-        footer p { font-size: 0.9rem; }
-
-        /* ===== ANIMATIONS ===== */
-        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
-            .nav-links { display: none; flex-direction: column; background: var(--primary); position: absolute; top: 100%; left: 0; width: 100%; padding: 1rem 0; text-align: center; box-shadow: 0 5px 10px rgba(0,0,0,0.2); }
-            .nav-links.active { display: flex; }
-            .hamburger { display: block; }
-            .hero h1 { font-size: 2.5rem; }
-            .hero p { font-size: 1rem; }
-            .about-content { grid-template-columns: 1fr; gap: 2rem; }
-            .about-image { height: 200px; font-size: 3rem; }
-            .section-title { font-size: 2rem; }
-            .nav-right { gap: 0.8rem; }
-            .lang-select { font-size: 0.8rem; padding: 4px 8px; }
-        }
-    </style>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -175,15 +43,24 @@
     <header id="navbar">
         <div class="container nav-container">
             <a href="#" class="logo">Jamiatut <span>Tayyibaat</span></a>
-            
+
             <div class="nav-right">
                 <ul class="nav-links" id="nav-links">
                     <li><a href="#home" data-translate="nav_home">Home</a></li>
                     <li><a href="#about" data-translate="nav_about">About</a></li>
                     <li><a href="#courses" data-translate="nav_courses">Courses</a></li>
-                    <li><a href="#contact" data-translate="nav_contact">Contact</a></li>
+                    <li><a href="#prayer-times" data-translate="nav_prayer">Prayer Times</a></li>
+                    <li><a href="#course-finder" data-translate="nav_finder">Find My Course</a></li>
+                    <li><a href="#testimonials" data-translate="nav_testimonials">Testimonials</a></li>
+                    <li><a href="#faq" data-translate="nav_faq">FAQ</a></li>
+                    <li><a href="#contact-section" data-translate="nav_contact">Contact</a></li>
                 </ul>
-                
+
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+                <button class="theme-toggle install-btn" id="installBtn" style="display:none;width:auto;padding:0 12px;border-radius:20px;gap:6px;" aria-label="Install App">
+                    <i class="fas fa-download"></i><span style="font-size:0.8rem;font-weight:600;">Install</span>
+                </button>
+
                 <!-- 3 Language Dropdown (No Hindi) -->
                 <select id="languageSelect" class="lang-select">
                     <option value="en">English</option>
@@ -207,8 +84,26 @@
         </div>
     </section>
 
+    <!-- Prayer Times Widget -->
+    <section id="prayer-times" class="section reveal">
+        <div class="container">
+            <h2 class="section-title" data-translate="prayer_title">Today's Prayer Times</h2>
+            <p style="text-align:center;color:#666;margin-top:-2rem;margin-bottom:2.2rem;" data-translate="prayer_desc">Never miss a prayer — select your city below.</p>
+            <div class="prayer-widget">
+                <div class="prayer-widget-head">
+                    <div class="prayer-dates">
+                        <strong id="gregorianDate">Loading date...</strong>
+                        <span id="hijriDate"></span>
+                    </div>
+                    <select id="citySelect" class="city-select"></select>
+                </div>
+                <div class="prayer-grid" id="prayerGrid"></div>
+            </div>
+        </div>
+    </section>
+
     <!-- About Section -->
-    <section id="about" class="section">
+    <section id="about" class="section reveal">
         <div class="container">
             <h2 class="section-title" data-translate="about_title">About Our Institute</h2>
             <div class="about-content">
@@ -225,7 +120,7 @@
     </section>
 
     <!-- Courses Section -->
-    <section id="courses" class="section">
+    <section id="courses" class="section reveal">
         <div class="container">
             <h2 class="section-title" data-translate="courses_title">Our Courses</h2>
             <div class="courses-grid">
@@ -233,114 +128,252 @@
                     <i class="fas fa-quran"></i>
                     <h3 data-translate="course1_title">Tajweed & Quran</h3>
                     <p data-translate="course1_desc">Master the art of reciting the Holy Quran with precise Tajweed rules and beautiful Qirat.</p>
+                    <button class="btn-enroll" data-course="Tajweed & Quran"><i class="fas fa-paper-plane"></i> <span data-translate="enroll_btn">Enroll Now</span></button>
                 </div>
                 <div class="course-card">
                     <i class="fas fa-landmark"></i>
                     <h3 data-translate="course2_title">Islamic Jurisprudence</h3>
                     <p data-translate="course2_desc">Deep dive into Fiqh, Hadith sciences, and the rich history of Islamic scholarship.</p>
+                    <button class="btn-enroll" data-course="Islamic Jurisprudence"><i class="fas fa-paper-plane"></i> <span data-translate="enroll_btn">Enroll Now</span></button>
                 </div>
                 <div class="course-card">
                     <i class="fas fa-laptop-code"></i>
                     <h3 data-translate="course3_title">Arabic & Modern Tech</h3>
                     <p data-translate="course3_desc">Learn the Arabic language fluently while mastering modern digital tools and coding.</p>
+                    <button class="btn-enroll" data-course="Arabic & Modern Tech"><i class="fas fa-paper-plane"></i> <span data-translate="enroll_btn">Enroll Now</span></button>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Stats Counter -->
+    <section id="stats">
+        <div class="container">
+            <h2 class="section-title" style="color:var(--white);" data-translate="stats_title">Jamiatut Tayyibaat in Numbers</h2>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <i class="fas fa-award"></i>
+                    <div class="stat-num" data-count="8" data-suffix="+">0</div>
+                    <div class="stat-label" data-translate="stat1_label">Years of Excellence</div>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-user-graduate"></i>
+                    <div class="stat-num" data-count="500" data-suffix="+">0</div>
+                    <div class="stat-label" data-translate="stat2_label">Students Enrolled</div>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-book-open"></i>
+                    <div class="stat-num" data-count="3" data-suffix="">0</div>
+                    <div class="stat-label" data-translate="stat3_label">Courses Offered</div>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <div class="stat-num" data-count="12" data-suffix="+">0</div>
+                    <div class="stat-label" data-translate="stat4_label">Certified Teachers</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Finder Quiz -->
+    <section id="course-finder" class="section reveal">
+        <div class="container">
+            <h2 class="section-title" data-translate="finder_title">Which Course Suits You?</h2>
+            <p style="text-align:center;color:#666;margin-top:-2rem;margin-bottom:2.2rem;" data-translate="finder_desc">Answer 3 quick questions and we'll recommend the perfect course for you.</p>
+
+            <div class="quiz-box">
+                <div class="quiz-progress">
+                    <span data-dot="1"></span><span data-dot="2"></span><span data-dot="3"></span>
+                </div>
+
+                <div class="quiz-step active" id="quizStepIntro">
+                    <h3 data-translate="finder_desc">Answer 3 quick questions and we'll recommend the perfect course for you.</h3>
+                    <button class="btn-primary" id="quizStartBtn" data-translate="finder_start">Start Quiz</button>
+                </div>
+
+                <div class="quiz-step" id="quizStep1" data-step="1">
+                    <h3 data-translate="fq1">What is your main goal?</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-option-btn" data-course="Tajweed & Quran" data-translate="fq1_o1">Recite the Quran beautifully &amp; correctly</button>
+                        <button class="quiz-option-btn" data-course="Islamic Jurisprudence" data-translate="fq1_o2">Understand Islamic rulings deeply</button>
+                        <button class="quiz-option-btn" data-course="Arabic & Modern Tech" data-translate="fq1_o3">Learn Arabic &amp; modern skills together</button>
+                    </div>
+                </div>
+
+                <div class="quiz-step" id="quizStep2" data-step="2">
+                    <h3 data-translate="fq2">What is your current level?</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-option-btn" data-course="Tajweed & Quran" data-translate="fq2_o1">Complete beginner</button>
+                        <button class="quiz-option-btn" data-course="Islamic Jurisprudence" data-translate="fq2_o2">Some knowledge already</button>
+                        <button class="quiz-option-btn" data-course="Arabic & Modern Tech" data-translate="fq2_o3">Looking to go advanced</button>
+                    </div>
+                </div>
+
+                <div class="quiz-step" id="quizStep3" data-step="3">
+                    <h3 data-translate="fq3">How much time can you give weekly?</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-option-btn" data-course="Tajweed & Quran" data-translate="fq3_o1">A few hours</button>
+                        <button class="quiz-option-btn" data-course="Islamic Jurisprudence" data-translate="fq3_o2">Several hours</button>
+                        <button class="quiz-option-btn" data-course="Arabic & Modern Tech" data-translate="fq3_o3">As much as needed</button>
+                    </div>
+                </div>
+
+                <div class="quiz-step" id="quizResultStep">
+                    <div id="quizResultBox"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section reveal">
+        <div class="container">
+            <h2 class="section-title" data-translate="testimonials_title">What Our Students Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-left"></i>
+                    <p class="quote" data-translate="t1_quote">Jamiatut Tayyibaat gave me a strong foundation in Tajweed while helping me stay connected to modern studies. Truly a blessing.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">A</div>
+                        <div>
+                            <strong data-translate="t1_name">Aisha R.</strong>
+                            <span data-translate="t1_role">Tajweed & Quran Student</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-left"></i>
+                    <p class="quote" data-translate="t2_quote">The teachers here explain Fiqh with so much clarity. I finally understand rulings I had struggled with for years.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">Y</div>
+                        <div>
+                            <strong data-translate="t2_name">Yusuf M.</strong>
+                            <span data-translate="t2_role">Islamic Jurisprudence Student</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <i class="fas fa-quote-left"></i>
+                    <p class="quote" data-translate="t3_quote">Learning Arabic alongside modern tech skills felt unique to this institute. Highly recommend to every student.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">F</div>
+                        <div>
+                            <strong data-translate="t3_name">Fatima S.</strong>
+                            <span data-translate="t3_role">Arabic & Modern Tech Student</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section reveal">
+        <div class="container">
+            <h2 class="section-title" data-translate="faq_title">Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question"><span data-translate="faq1_q">Are the classes online or in-person?</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer"><p data-translate="faq1_a">We offer flexible learning options — please contact us on WhatsApp to know the current schedule and mode for each course.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question"><span data-translate="faq2_q">Is there an admission fee?</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer"><p data-translate="faq2_a">Fee details vary by course. Message us on WhatsApp and our team will share the exact fee structure with you.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question"><span data-translate="faq3_q">Do you offer separate classes for beginners?</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer"><p data-translate="faq3_a">Yes, our courses are structured for different levels, from complete beginners to advanced students.</p></div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question"><span data-translate="faq4_q">How can I enroll?</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="faq-answer"><p data-translate="faq4_a">Simply click any "Enroll Now" button or the WhatsApp button, and our admissions team will guide you through the process.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact-section" class="section reveal">
+        <div class="container">
+            <h2 class="section-title" data-translate="contact_title">Get in Touch</h2>
+            <div class="contact-wrap">
+                <div class="contact-info">
+                    <p data-translate="contact_desc" style="color:#555;line-height:1.7;margin-bottom:0.5rem;">Have a question about our courses or admissions? Send us a message or reach out directly on WhatsApp.</p>
+                    <div class="contact-info-item">
+                        <div class="icon-circle"><i class="fab fa-whatsapp"></i></div>
+                        <div>
+                            <strong data-translate="contact_phone_label">WhatsApp / Phone</strong>
+                            <a href="https://wa.me/917394869484" target="_blank">+91 73948 69484</a>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="icon-circle"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <strong data-translate="contact_email_label">Email</strong>
+                            <span>info@jamiatuttayyibaat.org</span>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="icon-circle"><i class="fas fa-location-dot"></i></div>
+                        <div>
+                            <strong data-translate="contact_location_label">Location</strong>
+                            <span data-translate="contact_location_value">Available Online Worldwide</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <div class="form-group">
+                        <label data-translate="form_name">Your Name</label>
+                        <input type="text" name="name" required data-translate-placeholder="form_name" placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label data-translate="form_email">Your Email</label>
+                        <input type="email" name="email" required data-translate-placeholder="form_email" placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <label data-translate="form_message">Your Message</label>
+                        <textarea name="message" required data-translate-placeholder="form_message" placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width:100%;" data-translate="form_submit">Send Message</button>
+                    <div class="form-status" id="formStatus"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer id="contact">
+    <footer>
         <div class="container">
             <div class="socials">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/917394869484" target="_blank"><i class="fab fa-whatsapp"></i></a>
             </div>
             <p data-translate="footer_text">&copy; 2026 Jamiatut Tayyibaat. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <!-- Language Translations Dictionary -->
-    <script>
-        const translations = {
-            en: {
-                nav_home: "Home", nav_about: "About", nav_courses: "Courses", nav_contact: "Contact",
-                hero_title: "Welcome to Jamiatut Tayyibaat", hero_desc: "Illuminating minds with authentic Islamic knowledge and modern excellence.", hero_btn: "Explore Our Courses",
-                about_title: "About Our Institute", about_p1: "At <strong>Jamiatut Tayyibaat</strong>, we bridge the gap between traditional Islamic scholarship and the modern world. Our curriculum is designed to nurture both the soul and the mind.", about_p2: "We offer a unique blend of Quranic studies, Islamic jurisprudence, and contemporary skills like technology and leadership, preparing students for a global future while staying rooted in faith.", about_btn: "Learn More",
-                courses_title: "Our Courses", course1_title: "Tajweed & Quran", course1_desc: "Master the art of reciting the Holy Quran with precise Tajweed rules and beautiful Qirat.", course2_title: "Islamic Jurisprudence", course2_desc: "Deep dive into Fiqh, Hadith sciences, and the rich history of Islamic scholarship.", course3_title: "Arabic & Modern Tech", course3_desc: "Learn the Arabic language fluently while mastering modern digital tools and coding.",
-                footer_text: "&copy; 2026 Jamiatut Tayyibaat. All Rights Reserved."
-            },
-            ar: {
-                nav_home: "الرئيسية", nav_about: "عن المعهد", nav_courses: "الدورات", nav_contact: "اتصل بنا",
-                hero_title: "مرحبًا بكم في جامعة الطيبات", hero_desc: "تنوير العقول بالمعرفة الإسلامية الأصيلة والتميز الحديث.", hero_btn: "استكشف دوراتنا",
-                about_title: "عن معهدنا", about_p1: "في <strong>جامعة الطيبات</strong>، نسد الفجوة بين المنح الدراسية الإسلامية التقليدية والعالم الحديث. تم تصميم منهجنا لتنمية الروح والعقل معًا.", about_p2: "نقدم مزيجًا فريدًا من الدراسات القرآنية والفقه الإسلامي والمهارات المعاصرة مثل التكنولوجيا والقيادة، لإعداد الطلاب لمستقبل عالمي مع الحفاظ على جذورهم الإيمانية.", about_btn: "اعرف المزيد",
-                courses_title: "دوراتنا", course1_title: "التجويد والقرآن", course1_desc: "إتقن فن تلاوة القرآن الكريم بأحكام التجويد الدقيقة والقراءات الجميلة.", course2_title: "الفقه الإسلامي", course2_desc: "تعمق في الفقه وعلوم الحديث والتاريخ الغني للدراسات الإسلامية.", course3_title: "اللغة العربية والتقنية الحديثة", course3_desc: "تعلم اللغة العربية بطلاقة مع إتقان الأدوات الرقمية الحديثة والبرمجة.",
-                footer_text: "&copy; 2026 جامعة الطيبات. جميع الحقوق محفوظة."
-            },
-            ur: {
-                nav_home: "صفحہ اول", nav_about: "ہمارے بارے میں", nav_courses: "کورسز", nav_contact: "رابطہ کریں",
-                hero_title: "جامعۃ الطیبات میں خوش آمدید", hero_desc: "مستند اسلامی علم اور جدید مہارت کے ساتھ ذہنوں کو روشن کرنا۔", hero_btn: "ہمارے کورسز دیکھیں",
-                about_title: "ہمارے ادارے کے بارے میں", about_p1: "<strong>جامعۃ الطیبات</strong> میں، ہم روایتی اسلامی تعلیم اور جدید دنیا کے درمیان فرق کو پاٹتے ہیں۔ ہمارا نصاب روح اور دماغ دونوں کی پرورش کے لیے ڈیزائن کیا گیا ہے۔", about_p2: "ہم قرآنی علوم، اسلامی فقہ، اور ٹیکنالوجی اور قیادت جیسی جدید مہارتوں کا انوکھا امتزاج پیش کرتے ہیں، جو طلباء کو ایمان میں جڑے رہتے ہوئے عالمی مستقبل کے لیے تیار کرتا ہے۔", about_btn: "مزید جانیں",
-                courses_title: "ہمارے کورسز", course1_title: "تجوید و قرآن", course1_desc: "قرآن مجید کو درست تجوید کے قواعد اور خوبصورت قرات کے ساتھ پڑھنے کے فن میں مہارت حاصل کریں۔", course2_title: "اسلامی فقہ", course2_desc: "فقہ، حدیث کے علوم، اور اسلامی تعلیمات کی بھرپور تاریخ میں گہرائی سے جانیں۔", course3_title: "عربی اور جدید ٹیکنالوجی", course3_desc: "جدید ڈیجیٹل ٹولز اور کوڈنگ میں مہارت حاصل کرتے ہوئے عربی زبان روانی سے سیکھیں۔",
-                footer_text: "&copy; 2026 جامعۃ الطیبات۔ جملہ حقوق محفوظ ہیں۔"
-            }
-        };
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/917394869484?text=Assalamu%20Alaikum%2C%20I%20have%20a%20question%20about%20Jamiatut%20Tayyibaat." target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
-        // ===== LANGUAGE SWITCHER JAVASCRIPT (100% Bug-Free) =====
-        document.addEventListener('DOMContentLoaded', function() {
-            const langSelect = document.getElementById('languageSelect');
-            
-            function changeLanguage(lang) {
-                // Update all elements with data-translate attribute
-                document.querySelectorAll('[data-translate]').forEach(el => {
-                    const key = el.getAttribute('data-translate');
-                    if (translations[lang] && translations[lang][key]) {
-                        // Check if the element contains HTML (like <strong> tags)
-                        el.innerHTML = translations[lang][key];
-                    }
-                });
-            }
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 
-            // Listen for dropdown change
-            langSelect.addEventListener('change', function() {
-                changeLanguage(this.value);
-            });
+    <!-- Sticky Mobile Bottom Nav (mobile only) -->
+    <nav class="mobile-bottom-nav">
+        <a href="#home"><i class="fas fa-house"></i><span data-translate="mnav_home">Home</span></a>
+        <a href="#courses"><i class="fas fa-book-open"></i><span data-translate="mnav_courses">Courses</span></a>
+        <a href="#course-finder"><i class="fas fa-magnifying-glass"></i><span data-translate="mnav_finder">Finder</span></a>
+        <a href="https://wa.me/917394869484" target="_blank"><i class="fab fa-whatsapp"></i><span data-translate="mnav_whatsapp">Chat</span></a>
+    </nav>
 
-            // Load saved language from browser storage (optional)
-            const savedLang = localStorage.getItem('preferredLang');
-            if (savedLang && translations[savedLang]) {
-                langSelect.value = savedLang;
-                changeLanguage(savedLang);
-            }
-
-            // Save language preference when changed
-            langSelect.addEventListener('change', function() {
-                localStorage.setItem('preferredLang', this.value);
-            });
-        });
-
-        // ===== MOBILE MENU SCRIPT =====
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('nav-links');
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-
-        // ===== SCROLL EFFECT =====
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-    </script>
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
 </html>
