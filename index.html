@@ -29,6 +29,12 @@
     <meta property="og:type" content="website">
 
     <!-- Google Fonts -->
+    <!-- Preconnect: speeds up the first connection to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://api.aladhan.com">
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- FontAwesome Icons -->
@@ -119,6 +125,43 @@
         </div>
     </section>
 
+    <!-- Teachers Section -->
+    <section id="teachers" class="section reveal">
+        <div class="container">
+            <h2 class="section-title" data-translate="teachers_title">Our Teachers</h2>
+            <div class="teachers-grid">
+                <div class="teacher-card">
+                    <div class="teacher-avatar">ش</div>
+                    <h3>شاربہ</h3>
+                    <div class="teacher-subjects">
+                        <span data-translate="teacher1_s1">Tahfeez-ul-Quran</span>
+                        <span data-translate="teacher1_s2">Tajweed</span>
+                        <span data-translate="teacher1_s3">Hadeeth</span>
+                        <span data-translate="teacher1_s4">Fiqh</span>
+                    </div>
+                </div>
+                <div class="teacher-card">
+                    <div class="teacher-avatar">ن</div>
+                    <h3>ندیمہ</h3>
+                    <div class="teacher-subjects">
+                        <span data-translate="teacher2_s1">Nadhrah Quran</span>
+                        <span data-translate="teacher2_s2">Urdu</span>
+                        <span data-translate="teacher2_s3">Basic Islamic Knowledge</span>
+                    </div>
+                </div>
+                <div class="teacher-card">
+                    <div class="teacher-avatar">ش</div>
+                    <h3>شادمہ</h3>
+                    <div class="teacher-subjects">
+                        <span data-translate="teacher3_s1">Hadeeth</span>
+                        <span data-translate="teacher3_s2">Fiqh</span>
+                        <span data-translate="teacher3_s3">Tafseer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Courses Section -->
     <section id="courses" class="section reveal">
         <div class="container">
@@ -146,6 +189,171 @@
         </div>
     </section>
 
+    <!-- Full Syllabus Section -->
+    <section id="syllabus" class="section reveal">
+        <div class="container">
+            <h2 class="section-title" data-translate="syllabus_title">Our Complete Syllabus</h2>
+            <p style="text-align:center;color:#666;margin-top:-2rem;margin-bottom:2.2rem;" data-translate="syllabus_desc">A detailed look at every course and subject taught at Jamiatut Tayyibaat.</p>
+
+            <div class="syllabus-course-tabs">
+                <button class="syllabus-tab-btn active" data-target="syl-aalima" data-translate="syl_tab_aalima">Aalima Course (4 Years)</button>
+                <button class="syllabus-tab-btn" data-target="syl-momina" data-translate="syl_tab_momina">Momina Course</button>
+                <button class="syllabus-tab-btn" data-target="syl-momina-ibtedayi" data-translate="syl_tab_momina_ibtedayi">Momina Course Ibtedayi</button>
+                <button class="syllabus-tab-btn" data-target="syl-tahfeez" data-translate="syl_tab_tahfeez">Tahfeez-ul-Quran (Girls)</button>
+            </div>
+
+            <!-- Aalima Course: 4 years, accordion -->
+            <div class="syllabus-panel active" id="syl-aalima">
+                <div class="syllabus-year open">
+                    <div class="syllabus-year-head"><span dir="auto">عربی اول (درس نظامی) — عالمہ کورس</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="syllabus-year-body">
+                        <ol dir="auto">
+                            <li>ناظرہ قرآن مجید</li>
+                            <li>اصول التجوید</li>
+                            <li>قصص النبیین اول</li>
+                            <li>عربی کا معلم اول</li>
+                            <li>دروس اللغۃ العربیہ اول</li>
+                            <li>فارسی کی پہلی کتاب</li>
+                            <li>منہاج العربیہ اول،دوم</li>
+                            <li>تمرین الصرف</li>
+                            <li>عربی صفوۃ المصادر</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="syllabus-year">
+                    <div class="syllabus-year-head"><span dir="auto">عربی دوم (درس نظامی) — عالمہ کورس</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="syllabus-year-body">
+                        <ol dir="auto">
+                            <li>ترجمہ و تفسیر القرآن</li>
+                            <li>نورالایضاح</li>
+                            <li>ریاض الصالحین</li>
+                            <li>ہدایت النحو نصف اول</li>
+                            <li>اصول حدیث</li>
+                            <li>نحو قاسمی</li>
+                            <li>عربی کا معلم حصہ دوم</li>
+                            <li>دروس اللغۃ العربیہ جزء الثانی</li>
+                            <li>قصص النبیین حصہ دوم</li>
+                            <li>عربی صفوۃ المصادر نصف ثانی</li>
+                            <li>منہاج العربیہ سوم،چہارم</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="syllabus-year">
+                    <div class="syllabus-year-head"><span dir="auto">عربی سوم (درس نظامی) — عالمہ کورس</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="syllabus-year-body">
+                        <ol dir="auto">
+                            <li>ترجمہ و تفسیر القرآن</li>
+                            <li>مختصر القدوری</li>
+                            <li>ریاض الصالحین</li>
+                            <li>شرح الوقایہ</li>
+                            <li>اصول الشاشی</li>
+                            <li>منثورات من ادب العرب</li>
+                            <li>القرءۃ الراشدہ مکمل حصے</li>
+                            <li>علم الصیغہ اُردو</li>
+                            <li>آسان صرف مکمل حصے</li>
+                            <li>آسان نحو مکمل حصے</li>
+                            <li>عربی صفوۃ المصادر مابقی</li>
+                            <li>ہدایت النحو نصف آخر</li>
+                            <li>اصول حدیث نصف آخر</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="syllabus-year">
+                    <div class="syllabus-year-head"><span dir="auto">عربی چہارم (درس نظامی) — عالمہ کورس</span><i class="fas fa-chevron-down"></i></div>
+                    <div class="syllabus-year-body">
+                        <ol dir="auto">
+                            <li>جلالین شریف اول و ثانی</li>
+                            <li>مشکٰوۃ شریف</li>
+                            <li>ہدایہ شریف</li>
+                            <li>مختارات من ادب العرب</li>
+                            <li>الفوز الکبیر فی اصول التفسیر</li>
+                            <li>معلم الانشاء</li>
+                            <li>معین الفرائض</li>
+                            <li>عربی تکلم و عربی مضمون</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Momina Course -->
+            <div class="syllabus-panel" id="syl-momina">
+                <div class="syllabus-flat-list">
+                    <ol dir="auto">
+                        <li>ناظرہ قرآن مجید</li>
+                        <li>آسان ترجمہ قرآن (مختصر تفسیر قرآن)</li>
+                        <li>تسہیل بہشتی زیور مع سیرت النبی ﷺ</li>
+                        <li>نورانی قاعدہ مع اجراء و قواعد</li>
+                        <li>حفظ قرآنی سورۃ</li>
+                        <li>40 احادیث مع ترجمہ و مفہوم</li>
+                        <li>اسماء حسنیٰ ، مسنون دعائیں</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Momina Course Ibtedayi -->
+            <div class="syllabus-panel" id="syl-momina-ibtedayi">
+                <div class="syllabus-flat-list">
+                    <ol>
+                        <li>Quraan Shareef</li>
+                        <li>Urdu ki pahli kitab</li>
+                        <li>Noorani Qaida</li>
+                        <li>Urdu Tahreer</li>
+                        <li>Sirat-e-Nabi ﷺ</li>
+                        <li>Masnoon Duaein</li>
+                        <li>Asma-e-Husna</li>
+                        <li>20 Hifz Surahs</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Tahfeez-ul-Quran lil Banat -->
+            <div class="syllabus-panel" id="syl-tahfeez">
+                <div class="syllabus-flat-list">
+                    <ol dir="auto">
+                        <li>حفظ قرآن مجید</li>
+                        <li>اصول التجوید</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Academic Rules -->
+            <div class="rules-box">
+                <h3 data-translate="rules_title">Daily Lesson System &amp; Academic Rules</h3>
+                <div class="lesson-types">
+                    <span>📚 سبق</span>
+                    <span>📚 سبق پارہ</span>
+                    <span>📚 آموختہ</span>
+                </div>
+                <ul dir="auto">
+                    <li>روزآنہ تینوں اسباق سنانا لازم ہے</li>
+                    <li>کلاس کے اصول و ضوابط پر عمل پیرا ہونا شرط ہے، خلاف ورزی کی صورت میں کارروائی ہوگی۔</li>
+                    <li>مراجعہ، ٹیسٹ، امتحانات میں شرکت لازم ہے۔</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Courses -->
+    <section id="upcoming-courses" class="section reveal">
+        <div class="container">
+            <h2 class="section-title" data-translate="upcoming_title">Upcoming Courses</h2>
+            <div class="upcoming-grid">
+                <div class="upcoming-card">
+                    <span class="upcoming-badge" data-translate="coming_soon">Coming Soon</span>
+                    <i class="fas fa-comments"></i>
+                    <h3 data-translate="upcoming1_title">Arabic Academic &amp; Native Modern Speaking</h3>
+                    <p data-translate="upcoming1_desc">Master academic Arabic grammar alongside natural, modern conversational speaking skills.</p>
+                </div>
+                <div class="upcoming-card">
+                    <span class="upcoming-badge" data-translate="coming_soon">Coming Soon</span>
+                    <i class="fas fa-book-quran"></i>
+                    <h3 data-translate="upcoming2_title">Quran Tafseer</h3>
+                    <p data-translate="upcoming2_desc">An in-depth exploration of the meanings, context, and wisdom behind the verses of the Holy Quran.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Stats Counter -->
     <section id="stats">
         <div class="container">
@@ -153,7 +361,7 @@
             <div class="stats-grid">
                 <div class="stat-box">
                     <i class="fas fa-award"></i>
-                    <div class="stat-num" data-count="8" data-suffix="+">0</div>
+                    <div class="stat-num" data-count="5" data-suffix="+">0</div>
                     <div class="stat-label" data-translate="stat1_label">Years of Excellence</div>
                 </div>
                 <div class="stat-box">
@@ -168,7 +376,7 @@
                 </div>
                 <div class="stat-box">
                     <i class="fas fa-chalkboard-teacher"></i>
-                    <div class="stat-num" data-count="12" data-suffix="+">0</div>
+                    <div class="stat-num" data-count="3" data-suffix="">0</div>
                     <div class="stat-label" data-translate="stat4_label">Certified Teachers</div>
                 </div>
             </div>
@@ -197,6 +405,8 @@
                         <button class="quiz-option-btn" data-course="Tajweed & Quran" data-translate="fq1_o1">Recite the Quran beautifully &amp; correctly</button>
                         <button class="quiz-option-btn" data-course="Islamic Jurisprudence" data-translate="fq1_o2">Understand Islamic rulings deeply</button>
                         <button class="quiz-option-btn" data-course="Arabic & Modern Tech" data-translate="fq1_o3">Learn Arabic &amp; modern skills together</button>
+                        <button class="quiz-option-btn" data-course="Quran Tafseer" data-translate="fq1_o4">Understand the deep meaning of the Quran</button>
+                        <button class="quiz-option-btn" data-course="Arabic Language" data-translate="fq1_o5">Speak and write Arabic fluently</button>
                     </div>
                 </div>
 
@@ -206,6 +416,8 @@
                         <button class="quiz-option-btn" data-course="Tajweed & Quran" data-translate="fq2_o1">Complete beginner</button>
                         <button class="quiz-option-btn" data-course="Islamic Jurisprudence" data-translate="fq2_o2">Some knowledge already</button>
                         <button class="quiz-option-btn" data-course="Arabic & Modern Tech" data-translate="fq2_o3">Looking to go advanced</button>
+                        <button class="quiz-option-btn" data-course="Quran Tafseer" data-translate="fq2_o4">I can recite well, want to understand meaning</button>
+                        <button class="quiz-option-btn" data-course="Arabic Language" data-translate="fq2_o5">I want to focus purely on the language</button>
                     </div>
                 </div>
 
@@ -215,6 +427,8 @@
                         <button class="quiz-option-btn" data-course="Tajweed & Quran" data-translate="fq3_o1">A few hours</button>
                         <button class="quiz-option-btn" data-course="Islamic Jurisprudence" data-translate="fq3_o2">Several hours</button>
                         <button class="quiz-option-btn" data-course="Arabic & Modern Tech" data-translate="fq3_o3">As much as needed</button>
+                        <button class="quiz-option-btn" data-course="Quran Tafseer" data-translate="fq3_o4">Enough for deep reflection and study</button>
+                        <button class="quiz-option-btn" data-course="Arabic Language" data-translate="fq3_o5">Daily short practice sessions</button>
                     </div>
                 </div>
 

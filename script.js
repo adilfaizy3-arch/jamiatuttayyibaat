@@ -7,6 +7,7 @@ const PRAYER_CITIES = {
     "Madinah": ["Madinah", "Saudi Arabia"],
     "Delhi": ["Delhi", "India"],
     "Mumbai": ["Mumbai", "India"],
+    "Bangalore": ["Bangalore", "India"],
     "Lucknow": ["Lucknow", "India"],
     "Karachi": ["Karachi", "Pakistan"],
     "Dubai": ["Dubai", "United Arab Emirates"],
@@ -60,6 +61,20 @@ const translations = {
         finder_result_title: "Your Recommended Course:",
         finder_result_enroll: "Enroll in This Course", finder_restart: "Take Quiz Again",
         mnav_home: "Home", mnav_courses: "Courses", mnav_finder: "Finder", mnav_whatsapp: "Chat",
+        teachers_title: "Our Teachers",
+        teacher1_s1: "Tahfeez-ul-Quran", teacher1_s2: "Tajweed", teacher1_s3: "Hadeeth", teacher1_s4: "Fiqh",
+        teacher2_s1: "Nadhrah Quran", teacher2_s2: "Urdu", teacher2_s3: "Basic Islamic Knowledge",
+        teacher3_s1: "Hadeeth", teacher3_s2: "Fiqh", teacher3_s3: "Tafseer",
+        syllabus_title: "Our Complete Syllabus", syllabus_desc: "A detailed look at every course and subject taught at Jamiatut Tayyibaat.",
+        syl_tab_aalima: "Aalima Course (4 Years)", syl_tab_momina: "Momina Course",
+        syl_tab_momina_ibtedayi: "Momina Course Ibtedayi", syl_tab_tahfeez: "Tahfeez-ul-Quran (Girls)",
+        rules_title: "Daily Lesson System & Academic Rules",
+        upcoming_title: "Upcoming Courses", coming_soon: "Coming Soon",
+        upcoming1_title: "Arabic Academic & Native Modern Speaking", upcoming1_desc: "Master academic Arabic grammar alongside natural, modern conversational speaking skills.",
+        upcoming2_title: "Quran Tafseer", upcoming2_desc: "An in-depth exploration of the meanings, context, and wisdom behind the verses of the Holy Quran.",
+        fq1_o4: "Understand the deep meaning of the Quran", fq1_o5: "Speak and write Arabic fluently",
+        fq2_o4: "I can recite well, want to understand meaning", fq2_o5: "I want to focus purely on the language",
+        fq3_o4: "Enough for deep reflection and study", fq3_o5: "Daily short practice sessions",
         footer_text: "&copy; 2026 Jamiatut Tayyibaat. All Rights Reserved."
     },
     ar: {
@@ -104,6 +119,20 @@ const translations = {
         finder_result_title: "الدورة الموصى بها لك:",
         finder_result_enroll: "سجّل في هذه الدورة", finder_restart: "أعد الاختبار",
         mnav_home: "الرئيسية", mnav_courses: "الدورات", mnav_finder: "اختبار", mnav_whatsapp: "دردشة",
+        teachers_title: "أساتذتنا",
+        teacher1_s1: "تحفيظ القرآن", teacher1_s2: "التجويد", teacher1_s3: "الحديث", teacher1_s4: "الفقه",
+        teacher2_s1: "ناظرة القرآن", teacher2_s2: "الأردية", teacher2_s3: "أساسيات المعرفة الإسلامية",
+        teacher3_s1: "الحديث", teacher3_s2: "الفقه", teacher3_s3: "التفسير",
+        syllabus_title: "منهجنا الكامل", syllabus_desc: "نظرة تفصيلية على كل دورة ومادة تُدرّس في جامعة الطيبات.",
+        syl_tab_aalima: "دورة العالمية (4 سنوات)", syl_tab_momina: "دورة المؤمنة",
+        syl_tab_momina_ibtedayi: "دورة المؤمنة الابتدائية", syl_tab_tahfeez: "تحفيظ القرآن (للبنات)",
+        rules_title: "نظام الدروس اليومية والقواعد الأكاديمية",
+        upcoming_title: "الدورات القادمة", coming_soon: "قريبًا",
+        upcoming1_title: "العربية الأكاديمية والمحادثة الحديثة", upcoming1_desc: "إتقان قواعد اللغة العربية الأكاديمية إلى جانب مهارات المحادثة الحديثة الطبيعية.",
+        upcoming2_title: "تفسير القرآن", upcoming2_desc: "استكشاف معمّق لمعاني وسياق وحكمة آيات القرآن الكريم.",
+        fq1_o4: "فهم المعنى العميق للقرآن", fq1_o5: "التحدث والكتابة بالعربية بطلاقة",
+        fq2_o4: "أجيد التلاوة، أريد فهم المعنى", fq2_o5: "أريد التركيز على اللغة فقط",
+        fq3_o4: "وقت كافٍ للتأمل والدراسة العميقة", fq3_o5: "جلسات ممارسة يومية قصيرة",
         footer_text: "&copy; 2026 جامعة الطيبات. جميع الحقوق محفوظة."
     },
     ur: {
@@ -148,6 +177,20 @@ const translations = {
         finder_result_title: "آپ کے لیے تجویز کردہ کورس:",
         finder_result_enroll: "اس کورس میں داخلہ لیں", finder_restart: "دوبارہ کوئز لیں",
         mnav_home: "صفحہ اول", mnav_courses: "کورسز", mnav_finder: "تلاش", mnav_whatsapp: "چیٹ",
+        teachers_title: "ہمارے اساتذہ",
+        teacher1_s1: "تحفیظ القرآن", teacher1_s2: "تجوید", teacher1_s3: "حدیث", teacher1_s4: "فقہ",
+        teacher2_s1: "ناظرہ قرآن", teacher2_s2: "اردو", teacher2_s3: "بنیادی اسلامی معلومات",
+        teacher3_s1: "حدیث", teacher3_s2: "فقہ", teacher3_s3: "تفسیر",
+        syllabus_title: "ہمارا مکمل نصاب", syllabus_desc: "جامعۃ الطیبات میں پڑھائے جانے والے ہر کورس اور مضمون کی تفصیل۔",
+        syl_tab_aalima: "عالمہ کورس (4 سال)", syl_tab_momina: "مومنہ کورس",
+        syl_tab_momina_ibtedayi: "مومنہ کورس ابتدائی", syl_tab_tahfeez: "تحفیظ القرآن (للبنات)",
+        rules_title: "روزانہ اسباق کا نظام اور تعلیمی قواعد",
+        upcoming_title: "آنے والے کورسز", coming_soon: "جلد آ رہا ہے",
+        upcoming1_title: "عربی اکیڈمک اور جدید بول چال", upcoming1_desc: "عربی اکیڈمک قواعد کے ساتھ ساتھ فطری اور جدید بول چال کی مہارت حاصل کریں۔",
+        upcoming2_title: "تفسیر قرآن", upcoming2_desc: "قرآن مجید کی آیات کے معانی، سیاق و سباق اور حکمت کا گہرائی سے مطالعہ۔",
+        fq1_o4: "قرآن کے گہرے معنی سمجھنا", fq1_o5: "عربی روانی سے بولنا اور لکھنا",
+        fq2_o4: "تلاوت اچھی ہے، معنی سمجھنا چاہتا/چاہتی ہوں", fq2_o5: "صرف زبان پر توجہ دینا چاہتا/چاہتی ہوں",
+        fq3_o4: "گہرے غور و فکر اور مطالعے کے لیے کافی وقت", fq3_o5: "روزانہ مختصر مشق کے سیشنز",
         footer_text: "&copy; 2026 جامعۃ الطیبات۔ جملہ حقوق محفوظ ہیں۔"
     }
 };
@@ -193,12 +236,24 @@ document.addEventListener('DOMContentLoaded', function () {
         link.addEventListener('click', () => navLinks.classList.remove('active'));
     });
 
-    // ===== SCROLL EFFECT (navbar) =====
+    // ===== SCROLL EFFECT (navbar) — throttled with requestAnimationFrame
+    //       so the browser only updates once per paint frame instead of
+    //       running this on every single scroll pixel (the main cause of
+    //       scroll jank on mid-range phones) =====
     const navbar = document.getElementById('navbar');
+    let scrollTicking = false;
+    function handleScrollEffects() {
+        const y = window.scrollY;
+        navbar.classList.toggle('scrolled', y > 50);
+        backToTopBtn.classList.toggle('visible', y > 400);
+        scrollTicking = false;
+    }
     window.addEventListener('scroll', () => {
-        navbar.classList.toggle('scrolled', window.scrollY > 50);
-        backToTopBtn.classList.toggle('visible', window.scrollY > 400);
-    });
+        if (!scrollTicking) {
+            requestAnimationFrame(handleScrollEffects);
+            scrollTicking = true;
+        }
+    }, { passive: true });
 
     // ===== WHATSAPP ENROLL BUTTONS =====
     document.querySelectorAll('.btn-enroll').forEach(btn => {
@@ -303,6 +358,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initPrayerTimes();
     initStatsCounter();
     initCourseFinder();
+    initSyllabus();
 });
 
 /* =========================================================
@@ -419,7 +475,9 @@ function initStatsCounter() {
 const QUIZ_COURSE_MAP = {
     "Tajweed & Quran": { icon: "fa-quran" },
     "Islamic Jurisprudence": { icon: "fa-landmark" },
-    "Arabic & Modern Tech": { icon: "fa-laptop-code" }
+    "Arabic & Modern Tech": { icon: "fa-laptop-code" },
+    "Quran Tafseer": { icon: "fa-book-quran" },
+    "Arabic Language": { icon: "fa-comments" }
 };
 
 let quizAnswers = [];
@@ -481,8 +539,8 @@ function showQuizResult() {
 
     const lang = document.getElementById('languageSelect').value;
     const t = translations[lang] || translations.en;
-    const courseKeyMap = { "Tajweed & Quran": "course1_title", "Islamic Jurisprudence": "course2_title", "Arabic & Modern Tech": "course3_title" };
-    const descKeyMap = { "Tajweed & Quran": "course1_desc", "Islamic Jurisprudence": "course2_desc", "Arabic & Modern Tech": "course3_desc" };
+    const courseKeyMap = { "Tajweed & Quran": "course1_title", "Islamic Jurisprudence": "course2_title", "Arabic & Modern Tech": "course3_title", "Quran Tafseer": "upcoming2_title", "Arabic Language": "upcoming1_title" };
+    const descKeyMap = { "Tajweed & Quran": "course1_desc", "Islamic Jurisprudence": "course2_desc", "Arabic & Modern Tech": "course3_desc", "Quran Tafseer": "upcoming2_desc", "Arabic Language": "upcoming1_desc" };
 
     document.querySelectorAll('.quiz-step').forEach(s => s.classList.remove('active'));
     document.querySelectorAll('.quiz-progress span').forEach(p => p.classList.add('active'));
@@ -544,3 +602,25 @@ window.addEventListener('appinstalled', () => {
     const btn = document.getElementById('installBtn');
     if (btn) btn.style.display = 'none';
 });
+
+/* =========================================================
+   SYLLABUS: course tabs + year accordion
+========================================================= */
+function initSyllabus() {
+    const tabBtns = document.querySelectorAll('.syllabus-tab-btn');
+    const panels = document.querySelectorAll('.syllabus-panel');
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            tabBtns.forEach(b => b.classList.remove('active'));
+            panels.forEach(p => p.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById(btn.getAttribute('data-target')).classList.add('active');
+        });
+    });
+
+    document.querySelectorAll('.syllabus-year-head').forEach(head => {
+        head.addEventListener('click', () => {
+            head.closest('.syllabus-year').classList.toggle('open');
+        });
+    });
+}
